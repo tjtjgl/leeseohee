@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문/결제 - ShutterKH</title>
+    <link rel="icon" type="image/x-icon" href="../김소정/shutterkh_logo_small.png">
+
+    <link rel="stylesheet" href="css/구매.css">
+    <link rel="stylesheet" href="../공통/main_lee.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+</head>
+
+<body>
+    <div class="entire">
+        <div id="so_header">
+            <div id="header">
+                <img id="logo" title="imgtitle" src="../김소정/shutterkh_logo.png">
+
+
+                <ul id="gnb" class="">
+                    <li>
+                        <a href="#" class="nav_title">PRODUCT</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        신제품
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        프로모션
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        상품
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_title">PROGRAM</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        전시
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        라이브러리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_title">SUPPORT</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        A/S
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul id="util">
+                    <li>
+                        <a href="" id="cartIcon"> <!--장바구니아이콘-->
+                            <i class="bi bi-bag">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-bag" id="cartIcon_img" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+        
+                    <li><a href="#" ><span id="header_login_text">로그인</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="header">
+                <span>ORDER</span>
+                <h1>주문결제</h1>
+            </div>
+
+            <div class="s-1">
+                <h3>주문내역</h3>
+                <hr class="borderline">
+                <div class="s1-item">
+                    <div class="img-box">
+                        <img src="img/c1.png" style="width: 100px; height: 60px;">
+                    </div>
+                    <div class="product-box">
+                        <div style="margin-top: 30px;margin-bottom: 5px; font-weight: 600;">GFX100</div>
+                        <div id="lee_orderInfo">1개 X 12,999,000원</div>
+                    </div>
+                    <div class="price-box">
+                        <div style="margin-top: 35px;" id="lee_priceInfo1">12,999,000원</div>
+                    </div>
+                </div>
+                <hr>
+                
+                <div class="s-2">
+                    <h3>주문자 정보</h3>
+                    <hr class="borderline">
+                    <div class="s2-item">
+
+                        <!-- 주문자 정보 -->
+                        <ul>
+                            <li>
+                                <label>이름 *</label>
+                                <input type="text" id="lee_name" disabled>
+                            </li>
+
+                            <li>
+                                <label>휴대폰 *</label>
+                                <input type="text" id="lee_phone" disabled>
+                            </li>
+                            <li>
+                                <label>이메일 *</label>
+                                <input type="text" id="lee_email" disabled>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="s-3">
+                    <div class="s3-item0">
+
+                         <!-- 배송 정보 -->
+                        <h3>배송지 정보</h3>
+                        <div class="set" style="margin-block-end: 1em;">
+                            <input type="checkbox" name="" id="orderChk"><label for="orderChk">주문자와 동일</label>
+                        </div>
+                    </div>
+                    <hr class="borderline">
+                    <div class="s3-item">
+                        <ul>
+                            <li style="display: inline-block;">
+                                <label>이름 *</label>
+                                <input type="text" id="lee_name" name="이름">
+                                <p class="hide"></p>
+                            </li>
+                            <li>
+                                <label>휴대폰 *</label>
+                                <input type="text" id="lee_name" name="" placeholder="하이픈(-)없이 입력">
+                            </li>
+                            <li>
+                                <label>주소 *</label>
+                                <input type="text" id="kim_zonecode" class="kim_input lee_w" disabled>
+                                <button value="123" type="button" id="kim_address_btn">주소 검색</button><br>
+                                <label></label><input type="text" id="kim_address" class="kim_input lee_m" disabled><br>
+                                <label></label><input type="text" id="kim_detail_address" class="kim_input lee_m"
+                                    placeholder="상세주소">
+
+                            </li>
+                            <li>
+                                <label>배송요청사항</label>
+                                <select>
+                                    <option selected>배송요청사항 선택</option>
+                                    <option>배송 전, 연락바랍니다.</option>
+                                    <option>부재 시, 전화 또는 문자 연락주세요</option>
+                                    <option>직접 입력</option>
+                                </select>
+                                <!-- <input type="text" id="lee_name"> -->
+                            </li>
+
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+                <div class="s-4">
+                    <h3>결제 금액</h3>
+                    <hr class="borderline">
+                    <div class="s4-item">
+                        <ul>
+                            <li>
+                                <label>총 주문금액</label>
+                                <label style="text-align: right;" id="lee_priceInfo2">12,999,000원</label>
+                            </li>
+
+                            <li>
+                                <label>배송비</label>
+                                <label style="text-align: right;" title="2500">2,500원</label>
+                            </li>
+                            <li>
+                                <label>총 결제금액</label>
+                                <label id="lee_totalPrice" style="text-align: right;">12,999,000원</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                </div>
+                <div class="s-5">
+                    <h3>결제 수단</h3>
+                    <hr class="borderline">
+                    <div class="s5-item1">
+                        <button>신용카드</button>
+                        <button>실시간 계좌이체</button>
+                        <button>가상계좌 입금</button>
+                        <button>네이버페이</button>
+                        <button>카카오페이</button>
+                    </div>
+                    <div class="s5-item2">
+                        <h4>카드결제 안내</h4>
+                        <ul>
+                            <li>결제 수단에 따라 부가세가 표기된 카드영수증 또는 현금영수증(지불증빙용 또는 연말정산용)이 발급됩니다.</li>
+                            <li>카드영수증과 세금계산서는 이중 발행되지 않습니다.</li>
+                            <li>현금영수증 발행은 결제창에서 선택하시기 바랍니다.</li>
+                        </ul>
+                        <h4> 무이자 할부</h4>
+
+                        <ul>
+                            <li>롯데, 현대, 신한, BC, 하나SK, 국민, KEB하나, 삼성, NH농협</li>
+                            <li>5만원 이상 - 30만원 미만: 최대 3개월</li>
+                            <li>30만원 이상: 최대 12개월</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="s5-item3">
+                        <input type="checkbox" id="chkbox">
+                        <label for="chkbox">위의 판매조건을 확인하였으며, 구매 진행에 동의합니다.</label>
+                    </div>
+                    <hr>
+                </div>
+                <div class="s-6">
+                    <button id="lee_paybtn">결제하기</button>
+                </div>
+
+            </div>
+
+            <!-- 컨테이너 끝 -->
+        </div>
+    </div>
+
+    <div class="kim_item" id="footer">
+        <div id="footer_logo">
+            <img id="logo" title="imgfooter" src="../김소정/shutterkh_logo.png">
+        </div>
+
+        <div id="footer_text">
+            <p>사업자등록번호 : 1132396942</p>
+            <p>주소 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F</p><br>
+            <p>ⓒKH FILM Korea. co</p>
+        </div>
+
+        <div id="footer_number">
+            <h1>
+                <i class="bi bi-telephone-fill" id="phoneIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </i>
+
+                1544-9970
+
+            </h1><br>
+            <p>평일 09:00 - 18:00 / 토요일,일요일 및 공휴일 휴무</p>
+        </div>
+    </div>
+
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/input.js"></script> -->
+    <script src="../공통/header-link.js"></script>
+
+
+
+    <script src="js/구매.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* 태그속성 */
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+.container span {
+    font-size: 12pt;
+}
+
+.container p {
+    font-size: 34pt;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 0px;
+}
+
+
+/* ======= */
+.entire {
+    margin-top: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    /* background-color: #001; */
+    width: 1260px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "h"
+        "s1"
+        "s2"
+        "s3"
+        "p-nav"
+    ;
+
+}
+
+.header {
+    grid-area: h;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: url("../img/camera-header.jpg") no-repeat;
+    background-size: cover;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    box-sizing: border-box;
+}
+
+.section1 {
+    /* background-color:skyblue; */
+    grid-area: s1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.section2 {
+    grid-area: s2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+}
+
+
+.section3 {
+    grid-area: s3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+
+}
+
+/* 페이지네이션 */
+.lee_nav {
+    grid-area: p-nav;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.C-page .C-pagination {
+    list-style: none;
+}
+
+.C-pagination {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.C-pagination a {
+    text-decoration: none;
+    color: #96a0ad;
+    height: 28px;
+    width: 28px;
+}
+
+.first:hover,
+.last:hover,
+.left:hover,
+.right:hover {
+    color: #96a0ad;
+}
+
+.C-pagination a.active {
+    cursor: default;
+    color: #ffffff;
+}
+
+.C-pagination a:active {
+    outline: none;
+}
+/* ====================== */
+
+/* 모달 안씀 */
+.modal .num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal .num:hover {
+    background-color: #029570;
+    color: #ffffff;
+}
+
+.modal .num.active,
+.modal .num:active {
+    background-color: #029570;
+    cursor: pointer;
+}
+
+/* ============= */
+.title {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 20pt;
+    font-weight: 900;
+
+}
+
+.item {
+    position: relative;
+    border: 20px solid white;
+    background: #f7f7f7;
+    width: calc(1260px / 3);
+    padding: 60px 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.item:hover {
+    background: #bbbbbb48;
+
+}
+
+.item [class^="i-"] {
+    text-align: center;
+    width: 100%;
+
+}
+
+/* 카메라명 */
+.i-name {
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 10px 0px;
+}
+
+/* 코멘트 */
+.i-comment {
+    font-weight: lighter;
+    font-size: 14pt;
+    margin-bottom: 40px;
+}
+
+/* 가격 */
+.i-price {
+    font-size: 11pt;
+
+}
+
+[class$="-badge"] {
+    letter-spacing: 3px;
+    position: absolute;
+    font-size: 11pt;
+    font-weight: bold;
+    margin-top: 20px;
+    right: 0px;
+}
+
+.i-new-badge {
+    color: red;
+
+}
+
+.i-hit-badge {
+    color: green;
+
+}
+
+.i-so-badge {
+    color: gray;
+}

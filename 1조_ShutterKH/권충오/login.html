@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - ShutterKH</title>
+    <link rel="icon" type="image/x-icon" href="../김소정/shutterkh_logo_small.png">
+
+    
+    <link rel="stylesheet" href="../공통/main_공통.css">
+    <link rel="stylesheet" href="공유.css">
+    
+    <script type="text/javascript" src="jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+    
+    <script defer src="login.js"></script>
+    <script defer src="../공통/header-link.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" title="imgtitle" src="../김소정/shutterkh_logo.png">
+        <ul id="gnb" class="">
+            <li>
+                <a href="#" class="nav_title">PRODUCT</a>
+                <div class="snb">
+                    <ul>
+                        <li>
+                            <a href="" class="nav_sub">
+                                신제품
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav_sub">
+                                프로모션
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav_sub">
+                                상품
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="nav_title">PROGRAM</a>
+                <div class="snb">
+                    <ul>
+                        <li>
+                            <a href="" class="nav_sub">
+                                전시
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav_sub">
+                                라이브러리
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="nav_title">SUPPORT</a>
+                <div class="snb">
+                    <ul>
+                        <li>
+                            <a href="" class="nav_sub">
+                                공지사항
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="nav_sub">
+                                A/S
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul id="util">
+            <li>
+                <a href="" id="cartIcon"> <!--장바구니아이콘-->
+                    <i class="bi bi-bag">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-bag" id="cartIcon_img" viewBox="0 0 16 16">
+                            <path
+                                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                        </svg>
+                    </i>
+                </a>
+            </li>
+
+            <li><a href="#" ><span id="header_login_text">로그인</span></a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="mainText1">
+            <h3>FIND ID</h3>
+            <h1>아이디 찾기</h1>
+        </div>
+        <div class="mainText2">
+            <h3>FIND PASSWORD</h3>
+            <h1>비밀번호 찾기</h1>
+        </div>
+        <div class="mainText3">
+            <h3>LOGIN</h3>
+            <h1>로그인</h1>
+        </div>
+        <div class="mainText4">
+            <h3>APPLY</h3>
+            <h1>회원가입 신청</h1>
+        </div>
+        <div class="kwon_findId">
+            <div class="kwonRow">
+                <div class="kwon_findBox_id">
+                    <div class="nametable">
+                        <label for="name" style="margin-right: 10px;">이름</label>
+                        <input type="text" id="namebox_id" placeholder="이름입력">
+                    </div>
+                    <div class="phonetable">
+                        <label for="name">휴대폰</label>
+                        <input type="text" id="phonebox_id" placeholder="하이픈(-) 없이 숫자만 입력">
+                    </div>
+                    <div class="emailtable">
+                        <label for="name">이메일</label>
+                        <input type="text" id="emailbox_id" placeholder="이메일입력">
+                    </div>
+                    <div class="findidBtn">
+                        <input type="button" value="아이디 찾기" id="idbtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kwon_findPw">
+            <div class="kwonRow">
+                <div class="kwon_findBox_pw">
+                    <div class="nametable">
+                        <label for="userId">아이디</label>
+                        <input type="text" id="idBox_pw" placeholder="아이디 입력">
+                    </div>
+                    <div class="emailtable">
+                        <label for="name">이메일</label>
+                        <input type="text" id="emailbox_pw" placeholder="이메일입력">
+                    </div>
+                    <div class="findpwBtn">
+                        <input type="button" value="비밀번호 찾기" id="pwbtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kwon_login">
+            <div class="kwonRow">
+                <div class="kwon_loginBox">
+                    <div class="idtable">
+                        <input type="text" id="idBox_login" placeholder="아이디">
+                    </div>
+                    <div class="pwtable">
+                        <input type="password" id="pwbox_login" placeholder="비밀번호">
+                    </div>
+                    <div class="loginBtn">
+                        <input type="button" value="로그인하기" id="loginbtn">
+                    </div>
+                    <h4 id="logintext">소셜 미디어 간편 로그인</h4>
+                    <ul class="snsLogin">
+                        <li>
+                            <img id="naverImg"
+                                src="https://clova-phinf.pstatic.net/MjAxODAzMjlfOTIg/MDAxNTIyMjg3MzM3OTAy.WkiZikYhauL1hnpLWmCUBJvKjr6xnkmzP99rZPFXVwgg.mNH66A47eL0Mf8G34mPlwBFKP0nZBf2ZJn5D4Rvs8Vwg.PNG/image.png"
+                                alt="">
+                        </li>
+                        <li>
+                            <img id="kakaoImg"
+                                src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe918954d-0bc7-4fae-89e8-7d58b26c6f0a%2Fasdasd.png&blockId=6464750f-2710-49d9-bb27-388fc1141a81&width=256"
+                                alt="">
+                        </li>
+                        <li>
+                            <img id="googleImg"
+                                src="data:image/png;base64,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"
+                                alt="">
+                        </li>
+                    </ul>
+                    <ul class="loginbar">
+                        <li class="loginbar_new">
+                            <input type="button" id="loginbar_newBtn" value="회원가입">
+                        </li>
+                        <li class="loginbar_findid">
+                            <input type="button" id="loginbar_idBtn" value="아이디 찾기">
+                        </li>
+                        <li class="loginbar_findfw">
+                            <input type="button" id="loginbar_pwBtn" value="비밀번호 찾기">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kwon_newUser">
+            <div class="kwonRow">
+                <div class="kwon_newUserBox">
+                    <div class="idtable">
+                        <label for="userId">아이디</label>
+                        <div class="idbox">
+                            <input type="text" id="idBox" placeholder="아이디 입력" minlength="5" maxlength="15">
+                            <input type="button" value="중복확인" id="idcheckbtn">
+                        </div>
+                        <label id="idErr" style="font-size:10pt;"></label>
+                    </div>
+                    <div class="pwtable">
+                        <label for="password">비밀번호</label>
+                        <div>
+                            <input type="password" id="pwbox" placeholder="비밀번호 입력">
+                        </div>
+                        <div id="ulUser">
+                            <label>
+                                영문포함
+                                <img id="pwcheck1"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                    alt="">
+                            </label>
+                            <label>
+                                숫자포함
+                                <img id="pwcheck2"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                    alt="">
+                            </label>
+                            <label>
+                                10~20자 이내
+                                <img id="pwcheck3"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                    alt="">
+                            </label>
+                        </div>
+                        <label id="pwErr" style="font-size:10pt;"></label>
+                    </div>
+                    <div class="checkpwtable">
+                        <label for="checkpw">비밀번호 확인</label>
+                        <div>
+                            <input type="password" id="checkpwbox" placeholder="비밀번호 확인">
+                        </div>
+                        <label id="checkpwErr" style="font-size:10pt;"></label>
+                    </div>
+                    <div class="nametable">
+                        <label for="name">이름</label>
+                        <div>
+                            <input type="text" id="namebox" placeholder="이름 입력">
+                        </div>
+                    </div>
+                    <div class="phonetable">
+                        <label for="phone">휴대폰</label>
+                        <div>
+                            <input type="text" id="phonebox" placeholder="하이픈(-)없이 숫자만 입력">
+                        </div>
+                        <label id="phoneErr" style="font-size:10pt;"></label>
+                    </div>
+                    <div class="emailtable">
+                        <label for="email">이메일</label>
+                        <div>
+                            <input type="text" id="emailbox" placeholder="이메일 입력">
+                        </div>
+                        <label id="emailErr" style="font-size:10pt;"></label>
+                    </div>
+                    <div class="snsAgree">
+                        <label for="smsWant">SMS 수신</label>
+                        <div>
+                            <label><input type="radio" name="smsRadio">동의</label>
+                            <label><input type="radio" name="smsRadio">미동의</label>
+                        </div>
+                    </div>
+                    <div class="emailAgree">
+                        <label for="emailWant">이메일 수신</label>
+                        <div>
+                            <label><input type="radio" name="emailRadio">동의</label>
+                            <label><input type="radio" name="emailRadio">미동의</label>
+                        </div>
+                    </div>
+                    <div class="infomsg">
+                        <h4>개인정보 유효기간</h4>
+                        <p>기간동안 로그인 이력이 없으면 휴면회원으로 전환됩니다.</p>
+                    </div>
+                    <div class="yearRange">
+                        <label for="range">유효기간</label>
+                        <div>
+                            <label><input type="radio" name="rangeRaido">1년</label>
+                            <label><input type="radio" name="rangeRaido">3년</label>
+                            <label><input type="radio" name="rangeRaido">5년</label>
+                        </div>
+                    </div>
+                    <div class="agree">
+                        약관 동의
+                        <div>
+                            <input type="checkbox" id="totalAgree" style="margin-right: 3px;">전체 동의
+                        </div>
+                    </div>
+                    <label id="agreeErr" style="font-size:10pt;"></label>
+                    <ul class="agreetotal">
+                        <li id="agree1">
+                            <div>
+                                <input type="checkbox" id="agreecheck1">
+                                <label>
+                                    [필수] 개인정보 수집 및 이용에 대한 동의
+                                </label>
+                                <button type="button" id="checkBtn1">
+                                    <img id="check1"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                        alt="">
+                                </button>
+                            </div>
+                            <div class="box1">
+                                후지필름일렉트로닉이미징코리아 주식회사(이하 “회사”라 합니다)는 아래와 같이 귀하의 개인정보를 수집 및 이용합니다.<br>
+                                <br>
+                                <b>수집항목</b>
+                                <ul>
+                                    <li>아이디, 비밀번호, 이름, 생년월일, 휴대폰 번호, 이메일 주소, 설문조사 답변(입력하신 경우에 한함), 주소(입력하신 경우에 한함),
+                                        입금 은행, 계좌번호, SNS 계정 연동을 위한 개인 식별코드(입력하신 경우에 한함)</li>
+                                    <li>제품 수령 시 수령인의 이름, 휴대폰 번호 및 주소</li>
+                                    <li>정품등록 또는 무료체험 신청을 위한 개인 식별코드, 프로그램 평가 답변</li>
+                                    <li>정품등록한 제품의 제품명, 시리얼넘버, 구매처, 구매일, 구매영수증</li>
+                                    <li>A/S 접수 제품, A/S 의뢰내용, A/S 처리 결과</li>
+                                </ul>
+                                <br>
+                                <b>수집∙이용목적</b><br>
+                                <ul>
+                                    <li><b>계약 이행</b>: 상품 또는 서비스 구매 계약의 이행, 구매 계약의 취소, 반품, 환불, 계약 이행에 관한 고객 상담, 대금 결제
+                                    </li>
+                                    <li><b>제품 A/S</b>: 제품 A/S 및 처리현황 확인, A/S 제품 수거 및 발송, 유상 서비스일 경우 A/S서비스에 대한 대금 결제
+                                        수리이력 관리</li>
+                                    <li><b>회원 관리</b>: 회원제 서비스 이용에 따른 본인 확인, 개인 식별, 민원처리, 고객만족도 조사, 수리 이력 내역 관리, 고객
+                                        등급 지정 및 관리, 고지사항 전달, 회원 등급에 따른 혜택 제공</li>
+                                    <li><b>SNS 계정 연동을 통한 간편 로그인</b></li>
+                                </ul>
+                                <br>
+                                <b>보유∙이용기간</b><br>
+                                <u>관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 회원 탈퇴 시까지 귀하의 개인정보를 보유 및
+                                    이용합니다.</u><br>
+                                당사는 개인정보 보호법 제39조의6 제1항에 따라 휴면회원 제도 및 개인정보 유효기간 제도를 운영합니다.<br>
+                                당사는 개인정보 유효기간(1년) 동안 로그인 이력이 없는 회원에 대하여는 휴면회원으로 전환하며 휴면회원의 개인정보를 분리하여 별도로 보관합니다.<br>
+                                <br>
+                                <p>귀하는 필수적 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만 이에 동의하지 않을 경우 회원 가입 및 위 수집∙이용목적 항목에 기재된
+                                    서비스의 이용이 제한될 수 있음을 알려 드립니다.<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li id="agree2">
+                            <input type="checkbox" id="agreecheck2">
+                            <label>
+                                [선택] 개인정보 수집 및 이용에 대한 동의
+                            </label>
+                            <button type="button" id="checkBtn2">
+                                <img id="check2"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                    alt="">
+                            </button>
+                            <div class="box2">
+                                    회사는 아래와 같이 귀하의 개인정보를 수집 및 이용합니다.<br>
+                                    <br>
+                                    <b>수집항목</b><br>
+                                    1항에 의하여 수집한 귀하의 개인정보<br>
+                                    <br>
+                                    <b>수집∙이용목적</b><br>
+                                    <u>신제품 등의 정보 전달, 캠페인, 전시회, 세미나 등의 이벤트 안내, 제품의 기획, 개발, 판매를 위한 설문조사 혹은 모니터 등의 실시, 접속
+                                        빈도 파악 또는 회원의 서비스 이용에 대한 통계 등 마케팅 및 광고 활용, 이벤트 등 광고성 정보 전달</u><br>
+                                    <br>
+                                    <b>보유∙이용기간</b><br>
+                                    <u>관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 회원 탈퇴 시까지 귀하의 개인정보를 보유 및
+                                        이용합니다.</u><br>
+                                    <br>
+                                    당사는 개인정보 보호법 제39조의6 제1항에 따라 휴면회원 제도 및 개인정보 유효기간 제도를 운영합니다. 당사는 개인정보 유효기간(1년) 동안 로그인
+                                    이력이 없는 회원에 대하여는 휴면회원으로 전환하며 휴면회원의 개인정보를 분리하여 별도로 보관합니다<br>
+                                    <br>
+                                    <p>귀하는 선택적 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만 이에 동의하지 않을 경우 회사의 제품 및 서비스 안내 등의 정보 전달이 제한될
+                                        수 있음을 알려 드립니다.</p>
+                            </div>
+                        </li>
+                        <li id="agree3">
+                            <input type="checkbox" id="agreecheck3">
+                            <label>
+                                [선택] 영리목적 광고성 정보 수신에 대한 동의
+                            </label>
+                            <button type="button" id="checkBtn3">
+                                <img id="check3"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAASFBMVEX///8AAADj4+OmpqaOjo6pqanh4eEZGRnPz8+KioqHh4fQ0ND19fUuLi4XFxfx8fERERGBgYEICAgrKysxMTETExNRUVFzc3M5RFLgAAAERElEQVR4nO2ci3LaMBBFUSFNQ/OCNO3//2ljjAiyZVuPlfbuzp4PYDiz90oCLHY7wzAMwzAMwzAMwzAMwzCM4+Mb91toy8G5j2fuN9GSL0Hn/ihWfHIXXtQqHt2VF6VdPLgbOrt4J6izi0cX8KEuqE9ugrYuHqaC2lbUiKCuLh5jgpq6GJ2gpk1jUVBLUGerqLYVdVVQg+JKRHV0cVNQehcXtonJFAUHdaODHrmnm4SIylZMFpSqmNTBm6LALmZMcEDeppEpKG/TSFxFgymKCmqBoKwuZkf0OkUxQS0UlNPFrG1iMkURQS2e4EVRwBSrBCUEtWgVvQf9AFfRwZsidBcrIzryl9tiBRJB94NbY5nqDg48ahd8BRZUH1ESwXdgQYJtAruD6ieovoPqV1H1+6D6iKoXtIim8KldEDmi6jd662AKZ+2CyB1UH1H1guojqn6RsYimgLzRWwdTQD5sWweTMEE+LKIpIH9tiBPR4y+CF5mDs9GfnPtN8DJTcDp4+RmIfoo4E7z+zkWtCNRB/2K0ijir6On79Si7CNZBD90UASM6QjVFHMHT9EVppggaUTpFnM+D0cch6hVxIrrwvEetIs5GP+ugp265ge6gp2aKON+Lrj6SVK6I08HFiNYpQh7VKBVJBFt3sEYRJ6JJjwXmr6g4gpsRHcmdoohtokYRZ6PPeHI1RxEnolmP5qYr4hy2EzvoSV1uBHbQkzZFoREdSZkijmBmREe2p4gT0SLBbUWcs2jxBYd1RZyIVtzgWOsizufBwoiOLE8Rp4OVd3CWFEUe1XIUVXTQE1PEOaqRXBObLzc4Hdw9ULyV2RRxIvrFnuTNhFOkEfxJI9hiikARbaOIs8jcoAmqV4TqYAtFnI0+gCaow3ID10EP1RRxDtttFM//KF6FbpsIoQkqAe2eNgRRbPk4JU0Xa2n6vCiCYqMOetiD2v6RZuYp9rj5wqvY5ZltRsVed5fYutjvWgHXFDteK+BRbLxNhDAEtffFkO6K/W++9A4qw9Werornrh30dAwq1+2zblPku6TcS5Hxel0XRd5Lyh26yH0DtP0U2W+AtlZk2SZCmgaVO6IjDRVR/gmhXVBBBJsp8hzV4jQJKkYHPQ2miPaPQPSKQBEdIQ4qyip6D6ki5n9ZUAYVUpBSEa6DHqKgYm0TISRTRP7bMRpFaEECRewJDlR2EbmDnropChCsU4TdJkKKg4p5kolRqChHsDSoggSLFJE+0aeQHVQJ20RI5hTxN/o5eYrCIjqSoShxggPJXZTXQU/qFMUKpiqK7KAnIaiSTjIxNhU/RU9wYCuowic4sKoo7agWZyWocreJkMUpov34Us6SooqIjkSDivjjSzkRxVdFExyYB1XVBAemisomOBAEVcs2EXI3RamfB7f4VlQqeFN8V9hBz4PeDnr2miM6ste4TYQ8c78BwzAMwzAMwzAMwzAMw+DiP2NoQ+DWnUNfAAAAAElFTkSuQmCC"
+                                    alt="">
+                            </button>
+                            <div class="box3">
+                                <p>
+                                    회사는 <u>위 1항 기재 보유∙이용기간 중에 귀하에게 [E-mail 및 LMS 발송을 통해] [회사의 제품 및 서비스 홍보, 이벤트 행사 초대
+                                        등 회사의 재화·서비스를 홍보하거나 구매를 권유]하기 위한 목적으로
+                                        귀하로부터 수집한 개인정보를 이용</u>할 예정입니다. 귀하는 상기와 같은 목적의 개인정보 이용에 대해 동의하지 않으실 수 있으나, 이
+                                    경우 회사의 제품 및 서비스와 관련된 안내나 회사가 주최하는 행사에 초대받지 못하실 수
+                                    있음을 알려 드립니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="newUserBtn">
+                        <input type="button" value="가입하기" id="newbtn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kim_item" id="footer">
+        <div id="footer_logo">
+            <img id="logo" title="imgfooter"  src="../김소정/shutterkh_logo.png">
+        </div>
+
+        <div id="footer_text">
+            <p>사업자등록번호 : 1132396942</p>
+            <p>주소 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F</p><br>
+            <p>ⓒKH FILM Korea. co</p>
+        </div>
+
+        <div id="footer_number">
+            <h1>
+                <i class="bi bi-telephone-fill" id="phoneIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </i>
+
+                1544-9970
+
+            </h1><br>
+            <p>평일 09:00 - 18:00 / 토요일,일요일 및 공휴일 휴무</p>
+        </div>
+    </div>
+</body>
+
+</html>

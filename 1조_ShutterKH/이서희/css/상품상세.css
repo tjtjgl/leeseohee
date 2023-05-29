@@ -1,0 +1,617 @@
+
+/* 태그속성 */
+.container * {
+    box-sizing: border-box;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ================================================= */
+.entire {
+    margin-top: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.container {
+    /* background-color: #001; */
+    width: 80%;
+    display: grid;
+    grid-template-rows: 50px 1000px 150px auto 1000px auto auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+        "n"
+        "s1"
+        "s2"
+        "s3"
+        "s4"
+        "s6"
+        "s5"
+    ;
+}
+
+.nav {
+    width: 100%;
+    grid-area: n;
+    background-color: white;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    margin: 0px;
+}
+
+.subTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+}
+
+.lee_mainTitle {
+    font-weight: 650;
+    justify-content: left;
+    padding-left: 30px;
+
+}
+
+.test {
+    font-size: 10px;
+  }
+
+.underline {
+
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #D94925;
+    transition: width 0.5s ease;
+}
+
+.underline:hover::after {
+    width: 100%;
+}
+
+
+/* 오른쪽으로 버튼 정렬 */
+
+.right1 {
+    background-color: #ffffff;
+    position: absolute;
+    right: 120px;
+}
+
+.right2 {
+    background-color: #000000;
+    position: absolute;
+    right: 0;
+}
+
+.right1:hover,
+.right2:hover {
+    transition: 0.5s;
+    background-color: #D94925;
+}
+
+.right1:hover {
+    transition: 0.s;
+    color: white;
+}
+
+#s1 {
+    grid-area: s1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+    overflow: visible;
+
+}
+
+/* #s1 #lee_image {
+    width: 100%;
+    height: 100%;
+    display: block;
+} */
+
+#s1 .text div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    width: 530px;
+}
+
+#s1 .text div:first-child {
+
+    font-size: 40pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+}
+
+#s1 .text div:nth-child(2),
+#s1 .text div:nth-child(3),
+#s1 .text div:nth-child(4) {
+    font-size: 12pt;
+    margin-top: 30px;
+
+}
+
+#s1 .comment {
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+
+#s1 img {
+    position: absolute;
+    top: 60%;
+}
+
+
+
+#s2 {
+    /* background-color: skyblue; */
+    grid-area: s2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#s2 img {
+    width: 550px;
+    height: 60px;
+    position: absolute;
+    top: 370px;
+
+}
+
+#s2 .s2-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+#s2 .s2-items * {
+    margin: 10px 30px;
+}
+
+#s2 .s2-items hr {
+    height: 80px;
+}
+
+#s2 .s2-items2 {
+    width: 50%;
+}
+
+#s3 {
+    grid-area: s3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+#s3 p {
+    width: 70%;
+    line-height: 25px;
+    margin-bottom: 30px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
+
+#s4 {
+    grid-area: s4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-weight: 900;
+    font-size: 30pt;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+
+
+}
+
+/* =======코드팬 소스 응용 - 포토그래퍼 목록=======*/
+#s6 {
+    grid-area: s6;
+}
+
+#s6-item {
+    margin-top: 100px;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    height: 250px;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fly-in {
+    font-size: 4em;
+    margin: 110px auto;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+#fly-in span {
+    display: block;
+    font-size: .4em;
+    opacity: .8;
+}
+
+#fly-in div {
+
+    color: #000000;
+    margin: 2vh 0;
+    /* left: 10vw; */
+    width: 80vw;
+    animation: switch 10s linear infinite;
+}
+
+#fly-in div:nth-child(1) {
+    animation-delay: 1s
+}
+
+@keyframes switch {
+    0% {opacity: 0; filter: blur(20px); transform: scale(12) }
+    20% {opacity: 1; filter: blur(0); transform: scale(1) }
+    50% {opacity: 1; filter: blur(0); transform: scale(.7) }
+    80% {opacity: 1; filter: blur(0); transform: scale(.9) }
+    90% {opacity: 0; filter: blur(10px); transform: scale(.1)}
+    92% {opacity: 0 }
+    100% {opacity: 0 }
+}
+
+#s6 h1 {
+    text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 80pt;
+
+
+}
+
+#s6 .codepen_container {
+    height: 60vh;
+    width: 100vw;
+    max-height: 800px;
+    max-width: 1280px;
+    min-height: 600px;
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+
+    margin-bottom: 200px;
+}
+
+#s6 .border {
+    height: 369px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+}
+
+#s6 .border:hover {
+    border: 1px solid #fff;
+}
+
+#s6 .card {
+    height: 379px;
+    width: 300px;
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* 마리오 */
+#s6 .card0 {
+    background: url("../img/mario.png") center center no-repeat;
+    background-size: 300px;
+}
+#s6 .card0:hover {
+    background: url("../img/mario.png") top center no-repeat;
+    background-size: 600px;
+}
+#s6 .card0:hover h2 {opacity: 1;}
+#s6 .card0:hover .fa {opacity: 1;}
+/* 피치 */
+#s6 .card1 {
+    background: url("../img/peach.png") center center no-repeat;
+    background-size: 300px;
+}
+#s6 .card1:hover {
+    background: url("../img/peach.png") top center no-repeat;
+    background-size: 600px;
+}
+#s6 .card1:hover h2 {opacity: 1;}
+#s6 .card1:hover .fa {opacity: 1;}
+/* 루이지 */
+#s6 .card2 {
+    background: url("../img/Luiji.png") center center no-repeat;
+    background-size: 300px;
+}
+#s6 .card2:hover {
+    background: url("../img/Luiji.png") top center no-repeat;
+    background-size: 600px;
+}
+#s6 .card2:hover h2 {opacity: 1;}
+#s6 .card2:hover .fa {opacity: 1;}
+
+#s6 h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #000000;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#s6 .fa {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#s6 .icons {
+    position: absolute;
+    fill: #fff;
+    color: #acc8ff;
+    height: 130px;
+    top: 226px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+/* =========================== */
+
+
+/* 사양 더보기 - 전체 */
+#s5 {
+    grid-area: s5;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 100px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#s5 h5 {
+    letter-spacing: 3px;
+    font-weight: 900;
+
+}
+
+/* 사양 더보기 - 잘리는 부분 20%만 */
+#s5 .specTable {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease;
+    /* margin-bottom: 30px; */
+}
+
+/* 스펙테이블 보이는 부분 바꿔주기 */
+.show {
+    height: auto !important;
+}
+
+#s5 table td {
+    text-align: left;
+    padding: 10px;
+    font-size: 10pt;
+}
+
+#s5 table td:first-child {
+    border-top: 1px solid black;
+    border-right: 20px solid #f7f7f7;
+    width: 20%;
+}
+
+#s5 table td:last-child {
+    color: #666666;
+    border-top: 1px solid #cccccc;
+    width: 80%;
+
+}
+
+#s5 table tr:last-child td:first-child {
+    border-bottom: 1px solid black;
+    border-right: 20px solid #f7f7f7;
+}
+
+#s5 table tr:last-child td:last-child {
+    color: #666666;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* 더보기를 위한 요소들 */
+/* 버튼 */
+#s5 button {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 30px;
+}
+
+/* 가림막 */
+#s5 .mask {
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #f7f7f7);
+
+}
+
+/* ==================== */
+
+/* 배송안내 */
+#lee_delivery {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    margin: 50px 100px;
+}
+
+#lee_delivery #deliveryInfo {
+    width: 100%;
+    padding: 10px 20px;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+}
+
+#lee_delivery .lee_between {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+/* #lee_delivery .lee_between i {
+    transition: 0.5s ease;
+} */
+
+#deliveryInfo>li {
+    margin-top: 20px;
+}
+
+#lee_delivery .innerContent {
+    
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+
+}
+
+
+#lee_delivery .innerContent h5 {
+    font-size: 11pt;
+    padding: 0;
+}
+
+.showMore {
+    max-height: 1000px !important;
+    transition: max-height 0.5s ease;
+}
+
+#lee_delivery .innerContent li {
+    list-style: square;
+    font-size: 10pt;
+    color: #666666;
+    padding: 8px 20px;
+}
+
+#lee_delivery .innerContent li:last-child {
+  margin-bottom: 25px;
+}
+
+/* 구매하기를 위해 맨위로 버튼 */
+.badge {
+    position: fixed;
+    text-align: center;
+    font-size: 10pt;
+    bottom: 5%;
+    /* 원하는 위치로 조정 */
+    right: 2%;
+    /* 원하는 위치로 조정 */
+}
+
+/* 팝업창 숨겨.entire놓기  <-- 안씀 */
+.lee_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.lee_modal-content {
+    font-size: 20pt;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.lee_modal-buttons {
+    /* background-color: #fefefe; */
+    padding: 30px;
+    border: 0px;
+    width: 500px;
+    text-align: center;
+}
+.lee_modal button{
+    font-size: 14pt;
+    width: 130px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 0px;
+}
+
+.lee_modal button:first-child {
+    background-color: black;
+    color: white;
+}
+
+.lee_modal button:last-child {
+    background-color: white;
+    color: black;
+    border:1px solid black;
+}

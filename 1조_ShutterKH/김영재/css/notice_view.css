@@ -1,0 +1,150 @@
+/* view */
+
+/* main{
+    width: 1260px;
+} */
+
+body{
+    font-family: "NanumSquare", "Malgun Gothic", sans-serif;
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.kim_container{
+    /* width: 1260px;
+    margin: 0 auto;
+    padding: 90px 0; */
+    margin-top: 150px;
+}
+
+.kim_notice_header {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.kim_notice_header > p {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.kim_notice_header > h1{
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+}
+
+.kim_notice_viewbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kim_notice_view_header{
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #cccccc;
+}
+
+.kim_notice_view_header{
+    padding: 20px 0;
+}
+
+.kim_notice_viewbox > table{
+    width: 600px;
+    min-height: 400px;
+}
+
+.kim_notice_view_header > th{
+    text-align: start;
+}
+
+.kim_notice_view_header > h2{
+    margin: 0;
+}
+
+.kim_notice_view_date{
+    color: #737373;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.kim_notice_view_body{
+    border-bottom: 1px solid #cccccc;
+    line-height: 3;
+    vertical-align: top;
+    position: relative;
+}
+
+.kim_notice_edit{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.kim_notice_edit > button{
+    position: relative;
+    font-size: 15px;
+    background-color: transparent;
+    border:none;
+}
+
+
+.kim_notice_edit > button::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    transition: 0.3s ease-in-out;
+    background-color: #D94925;
+    width: 0px;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0;
+}
+
+.kim_notice_edit > button:hover::after{
+    opacity: 1;
+    width: calc(100%);
+    
+}
+#edit_notice{
+    
+    margin-right: 15px;
+}
+
+#remove_notice:hover, #edit_notice:hover{
+    color: #D94925;
+    font-weight: bold;
+}
+
+
+
+#remove_notice::after{
+    background-color: #D94925;
+}
+
+.kim_notice_view_body > p{
+    font-size: 17px;
+}
+
+
+.kim_notice_view_back_link{
+    display: block;
+    padding: 15px 30px;
+    margin: 15px auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 100px;
+}
+
+.kim_notice_view_back_link:hover{
+    transition: 0.5s;
+    background-color: #D94925;
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/상품상세.css">
+    <link rel="stylesheet" href="../공통/main_lee.css">
+    
+    <title>GFX100 - ShutterKH</title>
+    <link rel="icon" type="image/x-icon" href="../김소정/shutterkh_logo_small.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <!-- 모달팝업창 만들기 -->
+    <div id="lee_mymodal" class="lee_modal">
+        <div class="lee_modal-content">
+            <p>후지필름 회원만 구매가능합니다.</p>
+            <div class="lee_modal-buttons">
+                <button onclick="closeModal(true)">로그인하기</button>
+                <button onclick="closeModal(false)">돌아가기</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="entire">
+        <div id="so_header">
+            <div id="header">
+                <img id="logo" title="imgtitle" src="../김소정/shutterkh_logo.png">
+           
+
+                <ul id="gnb" class="">
+                    <li>
+                        <a href="#" class="nav_title">PRODUCT</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        신제품
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        프로모션
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        상품
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_title">PROGRAM</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        전시
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        라이브러리
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="nav_title">SUPPORT</a>
+                        <div class="snb">
+                            <ul>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="nav_sub">
+                                        A/S
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul id="util">
+                    <li>
+                        <a href="" id="cartIcon"> <!--장바구니아이콘-->
+                            <i class="bi bi-bag">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-bag" id="cartIcon_img" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                </svg>
+                            </i>
+                        </a>
+                    </li>
+        
+                    <li><a href="#" ><span id="header_login_text">로그인</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="nav">
+                <div class="subTitle lee_mainTitle" id="GFX100">GFX100</div>
+                <span class="subTitle"><a href="#s1" class="underline">제품 소개</a></span>
+                <span class="subTitle"><a href="#s5" class="underline">사양</a></span>
+                <span class="subTitle"><a href="#lee_delivery" class="underline">배송안내</a></span>
+                <a href="#" id="lee_addCart" class="subTitle right1">장바구니</a>
+                <a href="#" class="subTitle right2" style="color: white;" onclick="clearOrder()">구매하기</a>
+
+            </div>
+
+            <!-- <div id="s1">
+                <img id="lee_image" src="img/img1.jpg" alt="이미지">
+                <div class="comment">More than Full Frame</div>
+                <img src="img/c3.png">
+            </div> -->
+
+            <div id="s1" style="background-image:  url(img/1-3_img.jpg); 
+            background-repeat: repeat; background-size: 100% 100%">
+                <div class="comment">More than Full Frame</div>
+                <img src="img/c3.png">
+            </div>
+
+            <div id="s2">
+                <img src="img/c3_logo.png">
+                <div class="s2-items">
+                    <div class="item1">
+                        <div>센서 사이즈</div>
+                        <h3>43.8mm X 32.9MM</h3>
+                    </div>
+                    <hr>
+                    <div class="item2">
+                        <div>유효 화소수</div>
+                        <h3>1억2백만 화소</h3>
+                    </div>
+                    <hr>
+                    <div class="item3">
+                        <div>마운트</div>
+                        <h3>후지필름 G마운트</h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="s3">
+                <p>GFX100은 이면조사형 102MP 센서와 고속 X Processor 4 처리 엔진을 결합하여 색을 충실히 재현하고 섀도우 디테일이 뛰어난 놀라운 다이나믹 레인지의 16비트 이미지를
+                    만들어 냅니다. 노출면이 컬러 필터 어레이에 더 가깝기 때문에 이면조사센서를 사용하면 이미지 품질이 향상됩니다. 미러리스 카메라에서 일반적으로 경험하는 노이즈 레벨을 최소화하고
+                    기본 ISO를 ISO 100으로 확장합니다. 광학 로우 패스 필터를 제거하여 선명도가 향상되고 모아레 및 가색이 거의 발생하지 않습니다. 마지막으로 모션 센서 고정 메커니즘이
+                    포함되어 카메라 흔들림이나 셔터의 ​​움직임으로 인해 발생할 수 있는 아주 작은 진동도 억제합니다.</p>
+            </div>
+
+
+            <div id="s4" style="background-image: url(img/1-3_img2.png); 
+            background-repeat: repeat; background-size: cover">
+                @Photo By Leeseohee.
+            </div>
+            <!-- 코드팬 소스 응용 - 포토그래퍼 목록 -->
+            <div id="s6">
+                <div id="s6-item">
+                    <div id="fly-in">
+                        <div>The best Photographers<span>of this month</span></div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px; font-size: 10pt; color:#bababa";"><span>ShutterKH에서는 매월 자사 제품을 사용해 전시된 작품 중 가장 인기가 많은 작품의 작가 3인을 선정하여 수상하고 있습니다.</span></div>
+                <div class="codepen_container">
+                    <div class="card card0">
+                        <div class="border">
+                            <h2>Mario</h2>
+                            <div class="icons">
+                                <i class="fa fa-codepen" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card1">
+                        <div class="border">
+                            <h2>Princess Peach</h2>
+                            <div class="icons">
+                                <i class="fa fa-codepen" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="border">
+                            <h2>Luigi</h2>
+                            <div class="icons">
+                                <i class="fa fa-codepen" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <i class="fa fa-dribbble" aria-hidden="true"></i>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+            <!-- 사양 -->
+            <div id="s5" class="show">
+                <h5>SPECIFICATIONS</h5>
+                <h1>사양</h1>
+                <div class="specTable">
+                    <table style="width: 70%">
+                        <tr class="lee_content">
+                            <td>모델명</td>
+                            <td>지필름 GFX100</td>
+                        </tr>
+                        <tr class="lee_content">
+                            <td>유효 화소</td>
+                            <td>1억 200만 화소</td>
+                        </tr>
+                        <tr class="lee_content">
+                            <td rowspan="2">이미지 센서</td>
+                            <td>원색 필터를 포함한 43.8mm x 32.9mm 베이어 센서</td>
+                        </tr>
+                        <tr class="lee_content">
+                            <td>센서 클리닝 시스템: 초음파 진동</td>
+                        </tr>
+                        <tr class="lee_content">
+                            <td>노출 보정</td>
+                            <td>-5.0EV~+5.0EV 1/3EV 스탑 (동영상: -2.0EV~+2.0EV)</td>
+                        </tr>
+                        <tr class="lee_content">
+                            <td>셔터 타입</td>
+                            <td>포컬 플레인 셔터</td>
+                        </tr>
+
+                        <tr class="lee_content">
+                            <td>기타 기능</td>
+                            <td>Exif Print, 시각설정, 세계시계, 35개 언어, 내 메뉴 설정, 센서 청소, 배터리 수명, 규제, 사운드 설정, EVF 밝기, EVF 색상, EVF
+                                색상 조정, LCD 밝기, LCD 색상, LCD 색상 조정, 이미지 표시, 자동 회전 표시, 수동 모드에서 노출/화이트 밸런스 미리보기,
+                                내추럴 라이브 뷰, 프레이밍 가이드, 자동 회전 재생, 포커스 눈금 단위, 듀얼 디스플레이 설정, 디스플레이 커스텀 설정, 확대 표시 모드(EVF/LCD),
+                                확대 표시 설정, 정보 콘트라스트 조정 서브 모니터 설정, 후면 서브 모니터 설정, 서브 모니터 배경색, 후면 서브 모니터 밝기,
+                                포커스 레버 설정, 퀵 메뉴 편집/저장, 기능(Fn) 설정, 커맨드 다이얼 설정, 셔터 AF, 셔터 AE, 렌즈 없이 촬영, 메모리카드 없이 촬영, 포커스
+                                링, 포커스 링 작동, AE/AF 잠금 모드, AWB 잠금 모드, 노출 보정 버튼 설정, 터치스크린 설정, 잠금, 자동절전모드, 성능, 촬영 대기 모드
+                                자동절전, 프레임 넘버, 원본 화상 저장, 파일명 편집, 카드 슬롯 설정, 슬롯 선택, 폴더 선택 및 폴더 만들기, 저작권 정보</td>
+                        </tr>
+
+                        <tr class="lee_content">
+                            <td>크기</td>
+                            <td>EVF 포함: 156.2mm (W) x 163.6mm (H) x 102.9mm (D) (최소 두께: 48.9mm)<br>
+                                EVF 제외: 156.2mm (W) x 144.0mm (H) x 75.1mm (D) (최소 두께: 48.9mm)</td>
+                        </tr>
+
+                        <tr class="lee_content">
+                            <td>무게</td>
+                            <td>약 1,400g (EVF, 배터리 2개 및 메모리 카드 포함)<br>
+                                약 1,320g (배터리 2개 및 메모리 카드 포함) <br>
+                                약 1,155g (액세서리, 배터리 및 메모리 카드 제외)</td>
+                        </tr>
+                    </table>
+
+                    <div class="mask"></div>
+                </div>
+                <button id="lee_showBtn">더 보기 <i class="fa-solid fa-chevron-down"></i></label></button>
+
+                <!-- 배송정보 보여주기 -->
+                <div id="lee_delivery">
+
+                    <ul id="deliveryInfo">
+                        <li class="lee_between" id="lee_moreText1">
+                            <div >배송안내 </div>
+                            <div id="lee_moreBtn1"><i class="fa-solid fa-chevron-down fa-xl"></i>
+                            </div>
+                        </li>
+                        <li class="lee_deliveryContent">
+                            <ul class="innerContent" id="lee_deliveryContent1">
+                                <li>배송지역 : 전국 (해외배송 불가)</li>
+                                <li>배송비 : 택배 무료배송</li>
+                                <li>택배사 : 일양택배 또는 CJ대한통운</li>
+                                <li>배송일 : 입금완료 후부터 영업일 기준 3일이내 출고 ( 공휴일 및 토,일요일 제외 ), 출고일 이후 평균 2일 이내 배송</li>
+                                <li>예약판매 등의 일부 상품에 대해서는 상품 수급 또는 운송업체의 사정에 따라 배송이 지연될 수 있습니다.</li>
+                            </ul>
+                        </li>
+                        <hr>
+
+                        <li class="lee_between" id="lee_moreText2">
+                            <div id="">주문취소</div>
+                            <div id="lee_moreBtn2"><i class="fa-solid fa-chevron-down fa-xl"></i>
+                            </div>
+                        </li>
+                        <li class="lee_deliveryContent">
+                            <ul class="innerContent" id="lee_deliveryContent2">
+                                <h5> 주문취소 및 교환 반품 안내</h5>
+                                <li>상품 출고 전까지는 주문 취소가 가능하며, 출고된 이후로는 반품으로 진행됩니다.</li>
+                                <li>고객 변심으로 인한 교환 및 반품, 제품이상시에는 상품을 수령하신 날로부터 14일 이내에 신청 가능합니다.</li>
+                                <li> 반품 시 제공된 사은품은 모두 회수하며 회수가 되지 않을 경우 교환/반품이 불가능합니다.</li>
+                                <li> 단순 변심이나 주문 오류로 인한 반품 배송비는 고객님께서 부담하셔야 합니다(상품 하자 제외)</li>
+                                <li> 주문 취소 및 반품시에 고객님께 별도의 전화를 드릴 수 있으며, 반품의 경우 고객 전화상담 후에 반품이 최종 결정됩니다.</li>
+                                <li> 실제 반송된 상품의 상태가 다르거나 구성품이 누락된 경우 추가 비용을 부담하시거나, 반품신청이 취소될 수 있습니다.</li>
+                                <li> 주문취소/ 교환/ 반품으로 인한 환불은 처리 완료후 3~7일정도 소요될 수 있습니다.(카드 사 또는 은행의 처리시간 필요)</li>
+                                <li> 교환은 동일한 상품만 가능하며, 다른 상품으로 교환을 원하실 경우 해당 상품을 주문취소 후 다른 상품으로 주문해 주시기 바랍니다.</li>
+                                <li> 전자상거래 등에서의 소비자 보호에 관한 법률로 규정되어 있는 소비자 청약철회 범위에 해당하는 경우 신청 가능합니다.</li>
+                                <br>
+                                <h5> 교환 및 반품 불가사유</h5>
+                                <li> 상품의 특성상 포장을 개봉하여 사용한 경우 반품이 불가능하며, 반드시 상품 개봉전에 상품정보를 확인하시기 바랍니다.</li>
+                                <li> 재판매가 불가능한 정도로 박스 및 포장이 훼손된 경우 소비자 과실로 인하여 상품에 문제가 발생한 경우</li>
+                                <li> 구성품이 누락된 경우</li>
+                                <li> 단순변심으로 인한 교환 / 반품요청이 상품을 수령한 날로부터 14일을 경과한 경우</li>
+                                <li> 기타 전자상거래 등에서의 소비자 보호에 관한 법률이 정한 청약철회 제한 사유에 해당하는 경우</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- 컨테이너 끝 -->
+    </div>
+
+    </div>
+
+    <div class="kim_item" id="footer">
+        <div id="footer_logo">
+            <img id="logo" title="imgfooter" src="../김소정/shutterkh_logo.png">
+        </div>
+
+        <div id="footer_text">
+            <p>사업자등록번호 : 1132396942</p>
+            <p>주소 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F</p><br>
+            <p>ⓒKH FILM Korea. co</p>
+        </div>
+
+        <div id="footer_number">
+            <h1>
+                <i class="bi bi-telephone-fill" id="phoneIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </i>
+
+                1544-9970
+
+            </h1><br>
+            <p>평일 09:00 - 18:00 / 토요일,일요일 및 공휴일 휴무</p>
+        </div>
+    </div>
+
+    <div class="badge">구매하러가기
+        <br>
+        <br>
+        <i class="fa-solid fa-circle-up fa-2xl" style="color: #029570;"></i></ion-icon>
+    </div>
+
+    
+    <script src="js/batch-top.js"></script>
+    <script src="js/상품상세.js"></script>
+    <script src="js/input.js"></script>
+    <script src="../공통/header-link.js"></script>
+
+    
+    <script src="https://kit.fontawesome.com/a18e5e64b7.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

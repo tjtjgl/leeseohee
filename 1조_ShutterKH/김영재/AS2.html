@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/S신청 - ShutterKH</title>
+    <link rel="icon" type="image/x-icon" href="../김소정/shutterkh_logo_small.png">
+
+
+    <link rel="stylesheet" href="../공통/main_공통.css">
+    <script defer src="../공통/header-link.js"></script>
+
+    <link rel="stylesheet" href="css/AS2.css">
+    <!-- <link rel="stylesheet" href="css/공유.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+   
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+
+    
+</head>
+
+<body>
+    <div id="header">
+        <!-- <a href="" class="main_logo"> --><img id="logo" title="imgtitle"
+            src="../김소정/shutterkh_logo.png"><!-- </a> -->
+
+ 
+            <ul id="gnb" class="">
+                <li>
+                    <a href="#" class="nav_title">PRODUCT</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    신제품
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    프로모션
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    상품
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav_title">PROGRAM</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    전시
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    라이브러리
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav_title">SUPPORT</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    공지사항
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    A/S
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul id="util">
+                <li>
+                    <a href="" id="cartIcon"> <!--장바구니아이콘-->
+                        <i class="bi bi-bag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-bag" id="cartIcon_img" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                            </svg>
+                        </i>
+                    </a>
+                </li>
+    
+                <li><a href="#" ><span id="header_login_text">로그인</span></a></li>
+            </ul>
+    </div>
+    <div class="kim_container">
+        <div class="kim_AS_header">
+            <p>APPLY</p>
+            <h1>A/S 접수 신청</h1>
+        </div>
+        <div class="kim_AS_input">
+            <form action="" class="kim_AS_input_form">
+                <p><span class="star">＊</span>는 필수 입력사항 입니다.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label class="kim_input_label" for="kim_name">신청자 이름<span class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <input type="text" id="kim_name" class="kim_input">
+                                <p class="kim_AS_wrn" id="kim_AS_name_wrn">신청자 이름을 입력해주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="kim_input_label" for="kim_phone">휴대폰<span class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <input type="text" id="kim_phone" class="kim_input" placeholder="하이픈(-)없이 입력"
+                                    oninput="checkPhone()">
+                                <p class="kim_AS_wrn phone" id="kim_AS_phone_wrn1">휴대폰 번호를 입력해주세요.</p>
+                                <p class="kim_AS_wrn phone" id="kim_AS_phone_wrn2">숫자만 입력해주세요.</p>
+                                <p class="kim_AS_wrn phone" id="kim_AS_phone_wrn3">휴대폰 번호는 최소 10자 이상입니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="kim_input_label" for="kim_mail">이메일<span class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <input type="email" id="kim_mail" class="kim_input">
+                                <p class="kim_AS_wrn mail" id="kim_AS_mail_wrn1">이메일을 입력해주세요.</p>
+                                <p class="kim_AS_wrn mail" id="kim_AS_mail_wrn2">유효한 이메일을 입력해주세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>접수 방법<span class="star">＊</span></p>
+                            </td>
+                            <td>
+                                <input type="radio" name="send" id="kim_send_sel1" class="kim_send_sel" value="1">
+                                <label class="kim_input_label" for="kim_send_sel1">택배 수거</label>
+                                <input type="radio" name="send" id="kim_send_sel2" class="kim_send_sel" value="0">
+                                <label for="kim_send_sel2">직접 발송</label>
+                                <p class="kim_AS_wrn" id="kim_AS_send_wrn">접수 방법을 선택해주세요.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>수령 방법<span class="star">＊</span></p>
+                            </td>
+                            <td>
+                                <input type="radio" name="receive" id="kim_receive_sel1" class="kim_receive_sel"
+                                    value="1">
+                                <label class="kim_input_label" for="kim_receive_sel1">택배 수령</label>
+                                <input type="radio" name="receive" id="kim_receive_sel2" class="kim_receive_sel"
+                                    value="0">
+                                <label class="kim_input_label" for="kim_receive_sel2">직접 수령</label>
+                                <p class="kim_AS_wrn" id="kim_AS_recevie_wrn">수령 방법을 선택해주세요.</p>
+                            </td>
+                        </tr>
+                        <tr class="kim_add_row">
+                            <td>
+                                <label class="kim_input_label" for="kim_address">택배 수령/수거 장소<span
+                                        class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <input type="text" id="kim_zonecode" class="kim_input" disabled>
+                                <button type="button" id="kim_address_btn">주소
+                                    검색</button><br>
+                                <input type="text" id="kim_address" class="kim_input" disabled><br>
+                                <input type="text" id="kim_detail_address" class="kim_input" placeholder="상세주소">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="kim_input_label" for="kim_AS_product">A/S접수 제품<span
+                                        class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <input type="text" id="kim_AS_product" class="kim_input">
+                                <button type="button" id="kim_product_confirm_btn">제품번호 확인</button>
+                                <p class="kim_AS_wrn product" id="kim_AS_product_wrn1">제품 번호를 입력해주세요.</p>
+                                <div class="kim_AS_wrn product" id="kim_AS_product_wrn2">
+                                    <p>입력하신 제품번호가 일치하지 않거나 해외 제품일 수 있습니다.<br>
+                                        제품명을 직접 입력하여 A/S 접수해주세요.</p>
+                                    <input type="text" class="kim_input">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="kim_input_label" for="kim_AS_request">A/S요청사항<span
+                                        class="star">＊</span></label>
+                            </td>
+                            <td>
+                                <textarea name="request" maxlength="300" id="kim_AS_request" cols="40" rows="10"
+                                    placeholder="요청사항을 입력하세요." class="kim_input"></textarea>
+                                <p class="kim_AS_wrn" id="kim_AS_request_wrn">A/S 요청사항을 입력해주세요.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button type="submit" class="kim_AS_btn">신청하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="kim_item" id="footer">
+        <div id="footer_logo">
+            <img id="logo" title="imgfooter" src="../김소정/shutterkh_logo.png">
+        </div>
+
+        <div id="footer_text">
+            <p>사업자등록번호 : 1132396942</p>
+            <p>주소 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F</p><br>
+            <p>ⓒKH FILM Korea. co</p>
+        </div>
+
+        <div id="footer_number">
+            <h1>
+                <i class="bi bi-telephone-fill" id="phoneIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </i>
+
+                1544-9970
+
+            </h1><br>
+            <p>평일 09:00 - 18:00 / 토요일,일요일 및 공휴일 휴무</p>
+        </div>
+    </div>
+
+    
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/AS2.js"></script>
+    
+</body>
+
+</html>

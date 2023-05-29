@@ -1,0 +1,290 @@
+input{
+    outline: none;
+}
+/* 태그속성 */
+.container * {
+    box-sizing: border-box;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 공통 속성 */
+.hide{
+    display: none;
+}
+
+
+.container .borderline {
+    border: none;
+    height: 3px;
+    background-color: black;
+}
+
+.s-2 ul,
+.s-3 ul,
+.s-4 ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 0px;
+    width: 670px;
+}
+
+.s-2 li,
+.s-3 li,
+.s-4 li {
+    
+    margin: 10px;
+    width: 670px;
+    /* border-bottom: 1px solid #414141; */
+    padding-bottom: 30px;
+}
+
+.s-4 li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container input[type="text"]{
+    width: 320px;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 17px 15px;
+}
+
+.container select{
+    width: 320px;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+.container h3 {
+    margin-top: 50px;
+}
+
+.s-2 label,
+.s-3 .s3-item label,
+.s-4 label {
+    display: inline-block;
+    width: 170px;
+    font-size: 14pt;
+    color: rgb(112, 112, 112);
+}
+
+/* ========================== */
+.entire {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.container {
+    /* background-color: #001; */
+    display: grid;
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: repeat(1, 670px);
+    grid-template-areas:
+        "h"
+        "s1"
+        "s2"
+        "s3"
+        "s4"
+        "s5"
+        "s6"
+    ;
+}
+
+.header {
+    grid-area: h;
+    width: 100%;
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
+.header * {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.header span {
+    font-weight: bold;
+    letter-spacing: 3px;
+
+}
+
+.s-1 {
+    grid-area: s1;
+
+
+}
+
+.s-1 .s1-item {
+    display: flex;
+    justify-content: center;
+}
+
+.s-1 .s1-item .img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #f7f7f7;
+
+}
+
+.s-1 .s1-item .product-box {
+    width: 60%;
+    height: 100px;
+    margin: 0px 20px;
+}
+
+.s-1 .s1-item.price-box {
+    width: 100px;
+    height: 100px;
+}
+
+.s-2 {
+    grid-area: s2;
+}
+
+
+.s-3{
+    grid-area: s3;
+}
+
+.s-3 .s3-item0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.s-3 .kim_input {
+    margin-bottom: 10px;
+}
+
+.s-3 #kim_zonecode{
+    width: 220px;
+    margin-right: 10px;    
+}
+
+.s-3 #kim_address_btn{
+    width: 85px;
+    height: 45px;
+    background-color: white;
+    border: 1px solid #000;
+
+}
+
+.s-3 #kim_address_btn:hover{
+    background-color: #f7f7f7;
+
+}
+
+.s-3 .lee_m{
+    margin-left: 4px;
+}
+
+#lee_totalPrice {
+    font-weight: 800;
+    color: #D94925;
+}
+
+.s-5 {
+    grid-area: s5;
+}
+
+.s5-item1 {
+    display: flex;
+    justify-content: center;
+    width: 670px;
+    margin-top: 15px;
+}
+
+.s5-item1 button {
+    width: auto;
+    box-sizing: border-box;
+    padding: 18px 30px;
+    font-size: 11pt;
+    background-color: white;
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.s5-item1 button:hover{
+    background-color: #D94925;
+    color:white;
+    transition: 0.3s ease;
+    
+}
+
+.s5-item1 button:active{
+    background-color: #D94925;
+    color:white;
+    transition: 0.3s ease;
+    
+}
+
+
+
+.s5-item2 {
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    padding: 15px 27px;
+    height: auto;
+    width: 670px;
+    margin-top: 15px;
+    color: #414141;
+
+}
+
+.s5-item2 ul {
+    padding-left: 13px;
+    margin: 10px 0px;
+}
+
+
+.s5-item2 ul li {
+    margin: 10px 0px;
+}
+
+.s5-item3 {
+    margin: 15px 0px;
+}
+
+.s5-item3 #chkbox:hover+label {
+    transition: 0.3s;
+    color: #D94925;
+}
+
+
+
+
+.s-6 {
+    grid-area: s6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-6 button {
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    font-size: 16pt;
+    width: 148px;
+    height: 60px;
+    margin-top: 15px;
+}
+
+.s-6 button:hover {
+    transition: 0.3s;
+    background-color: #D94925;
+}

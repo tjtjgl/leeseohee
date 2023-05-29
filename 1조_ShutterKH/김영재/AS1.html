@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPPORT - A/S접수 - ShutterKH</title>
+    <link rel="icon" type="image/x-icon" href="../김소정/shutterkh_logo_small.png">
+
+    
+    <link rel="stylesheet" href="../공통/main_공통.css">
+    <script defer src="../공통/header-link.js"></script>
+    
+    <!-- <link rel="stylesheet" href="css/공유.css"> -->
+    <link rel="stylesheet" href="css/AS2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.4.js"></script>
+
+    
+</head>
+
+<body>
+    <div id="header">
+        <!-- <a href="" class="main_logo"> --><img id="logo" title="imgtitle"
+            src="../김소정/shutterkh_logo.png"><!-- </a> -->
+
+
+            <ul id="gnb" class="">
+                <li>
+                    <a href="#" class="nav_title">PRODUCT</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    신제품
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    프로모션
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    상품
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav_title">PROGRAM</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    전시
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    라이브러리
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nav_title">SUPPORT</a>
+                    <div class="snb">
+                        <ul>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    공지사항
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav_sub">
+                                    A/S
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul id="util">
+                <li>
+                    <a href="" id="cartIcon"> <!--장바구니아이콘-->
+                        <i class="bi bi-bag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-bag" id="cartIcon_img" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                            </svg>
+                        </i>
+                    </a>
+                </li>
+    
+                <li><a href="#" ><span id="header_login_text">로그인</span></a></li>
+            </ul>
+    </div>
+    <div class="kim_container">
+        <!-- 제목부분 -->
+        <div class="kim_AS_header">
+            <p>WARRANTY SERVICE</p>
+            <h1>A/S 접수</h1>
+            <div class="kim_AS_intro">
+                <p>누구든 택배나 직접수령 등 쉽게 수리 요청을 하실 수 있습니다.<br>
+                    무상 보증일 이내의 제품은 횟수 제한 없이 왕복 택배비 무료입니다.
+                </p>
+                <button type="button" class="kim_AS_btn" id="go_apply_btn">신청하기</button>
+            </div>
+        </div>
+        <div class="kim_AS_body">
+            <div class="kim_AS_step">
+                <div class="kim_AS_step_header">
+                    <h2>진행 절차</h2>
+                </div>
+                <div class="kim_AS_step_main">
+                    <ul>
+                        <li class="step_img">
+                            <p class="step_img_bgc">
+                                <img src="img/support/step-0.png" alt="">
+                            </p>
+                            <p class="setp_text">A/S 접수</p>
+                        </li>
+                        <li class="step_img">
+                            <p class="step_img_bgc"><img src="img/support/step-1.png" alt=""></p>
+                            <p class="setp_text">택배 수거 / 직접 발송</p>
+                        </li>
+                        <li class="step_img">
+                            <p class="step_img_bgc"><img src="img/support/step-2.png" alt=""></p>
+                            <p class="setp_text">A/S센터 도착</p>
+                        </li>
+                        <li class="step_img">
+                            <p class="step_img_bgc"><img src="img/support/step-3.png" alt=""></p>
+                            <p class="setp_text">수리 완료</p>
+                        </li>
+                        <li class="step_img">
+                            <p class="step_img_bgc"><img src="img/support/step-4.png" alt=""></p>
+                            <p class="setp_text">택배 수령 / 직접 수령</p>
+                        </li>
+                    </ul>
+                    <div class="kim_AS_step_info">
+                        <p>꼭 확인하세요</p>
+                        <ul>
+                            <li>디지털카메라 및 렌즈 관련 제품에 대한 A/S만 진행합니다.</li>
+                            <li>A/S 접수는 회원만 가능합니다.</li>
+                            <li>접수 방법으로 택배 수거 선택 시, 평일 기준 오후 5 시까지 접수 완료하시면, 당일 택배사에 수거 요청됩니다. 수거 요청 후, 약 2-3일(영업일
+                                기준) 이내에 고객님의 주소지로 택배 기사가 방문합니다.(CJ대한통운)</li>
+                            <li>A/S 수거 택배가 센터에 도착하면 담당 기사가 고객님의 접수건에 대해 상태, 수리 필요사항, 수리비를 전화로 안내드립니다.</li>
+                            <li>접수 방법으로 직접 발송 선택 시, 고객님께서 직접 제품을 발송해 주시거나 서비스센터로 방문 후 맡기실 수 있습니다.</li>
+                            <li>수리가 완료되면 고객님께 문자 메시지로 별도 안내를 드립니다. 회원의 경우, 마이페이지에서 수리비 결제가 가능하며, 비회원의 경우, 비회원 접수 현황
+                                페이지에서 수리비 결제가 가능합니다.</li>
+                            <li>무상 보증 기간 내(정품등록 완료한 고객에 해당) 왕복 택배비는 횟수 제한 없이 무료입니다. 단, 접수 시 지정 택배사를 통한 '수거요청' 시에만
+                                해당되며, '직접발송' 선택 시 발송 택배비는 고객님 부담입니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kim_item" id="footer">
+        <div id="footer_logo">
+            <img id="logo" title="imgfooter" src="../김소정/shutterkh_logo.png">
+        </div>
+
+        <div id="footer_text">
+            <p>사업자등록번호 : 1132396942</p>
+            <p>주소 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F</p><br>
+            <p>ⓒKH FILM Korea. co</p>
+        </div>
+
+        <div id="footer_number">
+            <h1>
+                <i class="bi bi-telephone-fill" id="phoneIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </i>
+
+                1544-9970
+
+            </h1><br>
+            <p>평일 09:00 - 18:00 / 토요일,일요일 및 공휴일 휴무</p>
+        </div>
+    </div>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/AS1.js"></script>
+</body>
+
+</html>

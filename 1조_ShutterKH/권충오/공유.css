@@ -1,0 +1,688 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* html, body{
+    height: 100%
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+} */
+
+/* #kim_wrap{
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 60px;
+
+} */
+/* 
+#header{
+    position: fixed; 
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e1e1e1;
+    display:flex;
+    justify-content: space-between;
+    z-index: 9999;
+    background-color: #fff;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 17px;
+
+}
+
+#header>#logo{
+    width: 144px;
+    height: 40px;
+    align-items: center;
+}
+
+#header > #logo{
+    padding: 20px 0;
+}
+
+#header > #gnb {
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#header > #gnb::before {
+    content: "";
+    width: 100%;
+    position:absolute;
+    top: 80px;
+    left: 0;
+    height: 180px;
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 0px 10px 10px 0px rgba(48,49,51,6%);
+    display: block;
+}
+
+#header > #gnb::before {
+    display: none;
+    align-items: center;
+}
+
+#header > #gnb.on::before {
+    display: block;
+}
+
+#header > #gnb > li .snb {
+    position:absolute;
+    top: 100px;
+    display:none;
+}
+
+#header > #gnb.on > li .snb {
+    display: block;
+}
+
+#header > #gnb > li > .snb > ul > li + li {
+    margin-top:20px;
+}
+
+#header > #util {
+    width: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#util>#cartIcon{
+    margin-right: 10px;
+    top: 100px;
+}
+
+
+
+#footer{
+    position: relative; 
+    transform: translatY(-100%);
+}
+
+#footer_logo > #logo{
+    width: 230px;
+    height: 55px;
+}
+
+#footer{
+display: grid;
+height: 100px;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: 100px;
+border-top: 1px solid #e1e1e1;
+padding: 40px 20px;
+}
+
+#footer_logo{
+    grid-column: 2/3;
+}
+
+#footer_text{
+    grid-column: 3 / 5;
+}
+
+#footer_number{
+    grid-column: 5/7;
+}
+
+#footer > #footer_text, #footer_number > p{
+    font-size: 14px;
+}
+
+#footer > #footer_text > p{
+    color: #616161;
+} */
+input[type="text"],
+input[type="password"]{
+    padding-left: 10px;
+}
+
+
+/* 권충오 */
+.mainText1{
+    display: none;
+    padding-bottom: 15px;
+}
+
+.mainText2{
+    display: none;
+    padding-bottom: 15px;
+}
+
+.mainText3{
+    padding-bottom: 15px;
+}
+
+.mainText4{
+    display: none;
+    padding-bottom: 15px;
+}
+
+.main h1 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+h3{
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.kwon_findId {
+    display: flex;
+    display: none;
+}
+.kwon_findPw {
+    display: flex;
+    display: none;
+}
+.kwonRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.kwon_findBox_id {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.kwon_findBox_pw {
+    width: 450px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.nametable, .phonetable, .emailtable, .snsAgree, .emailAgree, .yearRange, .agree{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+
+.snsAgree > div > label, .emailAgree > div > label{
+    margin-left: 10px;
+}
+
+.yearRange > div > label{
+    margin-left: 10px;
+}
+
+
+.infomsg{
+    margin-left: 30px;
+    border: 0;
+    border-bottom: 1px solid gray;
+    width: 386px;
+}
+.infomsg > p{
+    margin-top: 0px;
+    font-size: 14px;
+}
+.infomsg > h4{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+#namebox_id, #phonebox_id, #emailbox_id {
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+}
+.findidBtn{
+    text-align: center;
+    margin-top: 20px;
+}
+#idbtn{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+}
+label{
+    text-align: left;
+}
+#idBox_pw, #emailbox_pw {
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+}
+#pwbtn{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+}
+.findpwBtn{
+    text-align: center;
+    margin-top: 20px;
+}
+label{
+    text-align: left;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 150px; */
+    padding-top: 150px;
+    padding-bottom: 400px;
+    /* background-color: #f7f7f7; */
+}
+/* 버튼 효과 */
+#pwbtn:hover, #idbtn:hover, #loginbtn:hover, #idcheckbtn:hover, #newbtn:hover{
+    background-color:#D94925;
+    -webkit-transition-duration: 0.5s;
+    border: 0;
+    color:white;
+}
+/* 로그인화면 css */
+.kwon_login{
+    width: 450px;
+    /* height: 350px; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+/* 로그인하기 */
+#loginbtn{
+    width: 85%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+}
+/* 로그인창 아이디, 비밀번호 입력 박스 */
+#idBox_login, #pwbox_login {
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.loginBtn, #logintext{
+    text-align: center;
+    margin-top: 30px;
+}
+.idtable, .pwtable, .checkpwtable{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.kwon_loginBox{
+    background-color: white; 
+}
+/* 소셜미디어 이미지 */
+#kakaoImg, #googleImg{
+    width: 40px;
+    margin-left: 40px;
+}
+#naverImg{
+    width: 40px;
+}
+/* 소셜미디어 이미지 배치 */
+.snsLogin{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+/* 회원가입, 아이디찾기, 비밀번호찾기 */
+.loginbar{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-top: 15px;
+    border-top: 1px solid #cccccc;
+    margin-top: 30px;
+    font-size: 11pt;
+    
+}
+.loginbar_findid, .loginbar_findfw{
+    border-left: 1px solid gray;
+    margin-left: 10px;
+}
+#loginbar_newBtn{
+    background-color: white;
+    border: 0;
+    font-weight: lighter;
+}
+#loginbar_idBtn, #loginbar_pwBtn{
+    background-color: white;
+    border: 0;
+    font-weight: lighter;
+    margin-left: 10px;
+}
+/* 회원가입 */
+.kwon_newUser{
+    display: none;
+    background-color: white;
+    padding: 0px 50px 50px 50px;
+}
+.kwon_newUserBox{
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+/* 약관동의 버튼*/
+#checkBtn1, #checkBtn2, #checkBtn3{
+    background-color: white;
+    border: 0;
+}
+#checkBtn1, #checkBtn2{
+    margin-left: 46px;
+}
+#checkBtn3{
+    margin-left: 15px;
+}
+/* 약관동의 체크이미지*/
+#check1, #check2, #check3{
+    width: 15px;
+    opacity: 0.5;
+}
+/* 약관 동의 내용 */
+.box1, .box2, .box3{
+    width:auto;
+    height:200px;
+    overflow: auto;
+    border:1px solid black;
+    padding: 0 0.5em;
+    display: none;
+ font-size: 11pt;
+ line-height: 1.5;
+}
+.idbox{
+    display: flex;
+    flex-direction: row;
+}
+#idBox{
+    height: 50px;
+    width: 60%;
+    margin-top: 10px;
+}
+#idcheckbtn{
+    border: 1px solid black;
+    height: 54px;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 106px;
+    background-color: white;
+}
+#pwbox, #checkpwbox, #namebox, #emailbox, #phonebox{
+    height: 50px;
+    width: 90%;
+    margin-top: 10px;
+}
+#ulUser{
+    list-style: none;
+    flex-direction: row;
+}
+/* 비밀번호 체크 이미지*/
+#pwcheck1, #pwcheck2, #pwcheck3{
+    width: 13px;
+    opacity: 0.1;
+    margin-right: 10px;
+}
+#ulUser{
+    margin-top: 10px;
+    font-size: 10pt;
+}
+input[type="radio"]{
+    text-align: right;
+}
+.snsAgree, .emailAgree, .yearRange, .agree{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 35px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.agreetotal{
+    padding-left: 0px;
+    margin-left: 30px;
+    width: 386px;
+    
+    justify-content: space-between;
+}
+#agree1, #agree2, #agree3{
+    list-style: none;
+    border: 0;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#agree3{
+    border-bottom: 1px solid gray;
+}
+.newUserBtn{
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+#newbtn{
+    width: 60%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    margin: 20px 0px;
+    font-weight: 800;
+}
+#agreeErr{
+    margin-left: 30px;
+    display: none;
+}
+/* 신제품 페이지 */
+.container {
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/hero-base-lg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.title_1 {
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 45vh;
+}
+
+.title_2 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    font-weight: 800;
+}
+
+
+.box_2 {
+    margin-top: 50%;
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/hero-cover-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    background-position: center;
+    background-size: 100vw 100vh;
+    justify-content: center;
+}
+
+.box2Text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.box2Text>strong {
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.2);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.box2Text>.h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.box2Text>.text-btn {
+    color: white;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.box2Text> a{
+    text-decoration: underline;
+}
+
+.box_3 {
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/interview-patrick-la-roque-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-position: center;
+    background-size: 100vw 100vh;
+    position: relative;
+    justify-content: center;
+}
+.box_4 {
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/interview-bert-stephani-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-position: center;
+    background-size: 100vw 100vh;
+    position: relative;
+    justify-content: center; 
+}
+.box_5 {
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/interview-jakub-cejpek-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-position: center;
+    background-size: 100vw 100vh;
+    position: relative;
+    justify-content: center;
+}
+.box_6 {
+    background-image: url("https://fujifilm-korea.co.kr/assets/new/x-t5/interview-jimin-yoo-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-position: center;
+    background-size: 100vw 100vh;
+    position: relative;
+    justify-content: center;
+}
+.box3Text{
+    margin-left: 10%;
+    padding-bottom: 6rem;
+    padding-top: 25%;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.box4Text, .box5Text, .box6Text{
+    margin-left: 10%;
+    padding-bottom: 6rem;
+    padding-top: 20%;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.box3Text > h3, .box4Text > h3, .box5Text > h3, .box6Text > h3 {
+    text-align: left;
+    color: #fff;
+}
+.box3Text_p, .box4Text_p, .box5Text_p, .box6Text_p{
+    max-width: 500px;
+    margin: 1em 0 2em;
+    color: rgba(240, 240, 240, 0.7);
+    font-size: 14px;
+    line-height: 1.8;
+}
+.btn--ghost {
+    border-color: #fff;
+    color: #fff;
+    padding: 12px 28px;
+    border: 1px solid;
+}
+.btn__text{
+    color: #FFF;
+}
+.btn--ghost:hover, .btn--ghost:focus {
+    transition: 0.5s;
+    background-color: #D94925;
+    border: none;
+}
+.box_7{
+    margin-bottom: 100px;
+    background-color: white;
+}
+.box_7 > h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+.box_7 > ul{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.box_7_item{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+#box_7_Img1, #box_7_Img2, #box_7_Img3, #box_7_Img4{
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.box_7_name{
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: .05em;
+}
+.box_7_info{
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+.box_7_btn> ins{
+    color: #029570;
+}
+.box_7_btn{
+    line-height: 40px;
+}
+
+/* 권충오 끝 */
