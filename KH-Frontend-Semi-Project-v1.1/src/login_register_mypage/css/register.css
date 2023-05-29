@@ -1,0 +1,4 @@
+.input_items > .input_item_row:not(:last-child),
+.input_items > .password_inputs > input:not(:last-of-type) {
+  margin-bottom: 8px;
+}

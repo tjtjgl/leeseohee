@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../login_register_mypage/img/hanja-seoul_gyeong.png" type="image/png" />
+    <title>테마별 - 서울 구京</title>
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../login_register_mypage/css/common/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../login_register_mypage/js/common/common.js"></script>
+    <script src="../login_register_mypage/js/common/account_manager.js"></script>
+  </head>
+  <body>
+    <header class="header active">
+      <div class="nav_1">
+        <div class="logo"></div>
+        <div class="nav_2 active_font">
+          <a style="color: black" href="../mainpage/mainPage.html"
+            ><span class="colored">홈</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="tema.html"><span class="colored">테마</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="area.html"><span class="colored">지역</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/ReviewBoard/review_board.html"
+            ><span class="colored">여행후기</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/Map/map.html"
+            ><span class="colored">스탬프</span></a
+          >
+        </div>
+        <!-- 로그인/비로그인 아이콘 링크 넣기 -->
+        <div class="nav_3">
+          <a href="search.html" title="검색"
+            ><i class="nav_icon fa-solid fa-magnifying-glass fa-xs"></i
+          ></a>
+          <span class="inIcon" style="display: none">
+            <a href="../login_register_mypage/my_page.html" title="마이페이지"
+              ><i class="nav_icon fa-regular fa-user fa-xs"></i
+            ></a>
+            <button type="button" class="header_logout_button" title="로그아웃">
+              <i class="nav_icon fa-solid fa-xs fa-arrow-right-from-bracket"></i>
+            </button>
+          </span>
+          <span class="outIcon" style="">
+            <a href="../login_register_mypage/login.html" class="nav_icon" title="로그인">
+              <img src="../mainpage/imgs/key-fill.svg" alt="로그인" width="30px"
+            /></a>
+            <a href="../login_register_mypage/register.html" class="nav_icon" title="회원가입">
+              <img src="../mainpage/imgs/person-plus.svg" alt="회원가입" width="30px"
+            /></a>
+          </span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div id="go-top" style="position: fixed; right: 5%; bottom: 5%">
+          <a href="#"
+            ><img
+              src="../mainpage/imgs/arrow-up-circle-fill.svg"
+              alt="위로가기"
+              title="위로가기"
+              style="width: 40px"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <div class="festival">
+      <div><img src="img/fff.jpg" alt="" /></div>
+      <!-- Slider main container -->
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        space-between="30"
+        slides-per-view="4"
+      >
+        <swiper-slide><img src="img/f1.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f2.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f3.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f4.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f5.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f6.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f7.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f8.jpg" alt="" /></swiper-slide>
+        <swiper-slide><img src="img/f9.jpg" alt="" /></swiper-slide>
+      </swiper-container>
+    </div>
+    <main>
+      <div class="container">
+        <div class="co_1">
+          <div class="container_img asd">
+            <div class="info">
+              <div class="asd_title">반려동물 동반여행</div>
+              <div class="asd_text">
+                반려동물과 함께할 수 있는 <br />
+                여행지를 소개합니다.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co_1">
+          <div class="container_img asd2">
+            <div class="info2">
+              <div class="asd_title">친환경 추천여행</div>
+              <div class="asd_text">
+                지구를 생각하는 친환경 저찬소 <br />
+                여행법 알아보기!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co_1">
+          <div class="container_img asd3">
+            <div class="info3">
+              <div class="asd_title">문화관광해설사 통합예약</div>
+              <div class="asd_text">
+                전문적인 해설과 함께라면 여행의 <br />
+                재미가 플러스!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co_1">
+          <div class="container_img asd4">
+            <div class="info4">
+              <div class="asd_title">생활관광</div>
+              <div class="asd_text">
+                현지인다움과 지역다움을 체험할 <br />
+                수 있는 지역관광
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co_1">
+          <div class="container_img asd5">
+            <div class="info5">
+              <div class="asd_title">산업관광</div>
+              <div class="asd_text">
+                전통 산업부터 예술·문화·첨단 <br />
+                산업까지! 체험 산업관광지
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="co_1">
+          <div class="container_img asd6">
+            <div class="info6">
+              <div class="asd_title">서울관광지 24선</div>
+              <div class="asd_text">
+                관광공사에서 제공하는 서울관광 <br />
+                여행지 모음!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="carousel" class="carousel disappear">
+      <swiper-container
+        class="mySwiper"
+        pagination="true"
+        pagination-clickable="true"
+        navigation="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="3500"
+        autoplay-disable-on-interaction="false"
+      >
+        <swiper-slide><img class="dog" src="img/dog1.png" alt="" /></swiper-slide>
+        <swiper-slide><img class="dog" src="img/dog2.png" alt="" /></swiper-slide>
+        <swiper-slide><img class="dog" src="img/dog3.png" alt="" /></swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div id="iframe" class="iframe disappear">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/qjLAquMYSrc?autoplay=1&mute=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div id="aromatica" class="aromatica disappear">
+      <div class="aromatica_recommened">
+        <p style="font-weight: 600">👍이런분들에게 추천해드립니다.</p>
+        <p>친환경에 관심이 많으신 분</p>
+        <p>지하철 타고도 갈 수 있는 곳을 찾는 분</p>
+        <p>서울 가볼 만한 곳을 찾는 분</p>
+      </div>
+      <br /><br /><br />
+      <h4 style="font-weight: 800">1. 아로마티카 제로스테이션 신사</h4>
+      <hr />
+      <div class="img_text">
+        <div class="aromatica_img"><img src="img/aromatica.jpg" alt="" /></div>
+        <div>
+          아로마티카 리필 스테이션 신사는 클린&비건 뷰티 브랜드 <br />
+          '아로마티카'에서 국내 뷰티 브랜드 최초 리필 스테이션입니다.<br />
+          아로마티카존, 리필스테이션존, 아로마테피존 등 총 8개의 공간<br />에서 제로 웨이스트를
+          체험할 수 있습니다. 입구 앞으로 PE 투평 <br />페트, HDPE 뚜껑 등 소재별로 플라스틱을
+          배출할 수 있는 분리<br />
+          배출장이 있는데요. 약 32개의 제로 웨이스트 상점들과 연대하여<br />
+          거점마다 수거함이 설치되어 있습니다. 이렇게 모인 플라스틱은<br />
+          아로마티카의 제품 용기와 제로 웨이스트 굿즈로 다시 재활용됩니다.
+          <br /><br /><br />
+        </div>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.436477625598!2d127.0190641115966!3d37.52120707193381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3509fa70d03%3A0xd5e5e3b537a9a5e1!2sHOUSE%20OF%20AROMATICA!5e0!3m2!1sko!2skr!4v1684307198513!5m2!1sko!2skr"
+        width="850"
+        height="250"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <br /><br />
+      <p>📌대중교통 이용시: 신사역 6번 출구에서 도보 약 10분</p>
+      <br /><br /><br />
+      <h4 style="font-weight: 800">2. 제로띵스</h4>
+      <hr />
+      <div class="img_text">
+        <div class="zero_img"><img src="img/zero.png" alt="" /></div>
+        <div>
+          제로띵스는 '일상에 스며드는 초록색 소비'를 지향하는 친환경<br />
+          제로 웨이스트 숍입니다. 버려지는 것을 최소화하기 위한 '제로
+          <br />웨이스트', 다회용 제품 판매를 통한 '지속 가능성', 건강하고 행<br />복한 일상 추구의
+          '일상의 가치'를 통해 자연과 공존하여 더욱더 <br />건강한 삶을 고민해 보는 방식을
+          제시합니다. 매장 내부 에 작지<br />만 알찬 리필 스테이션이 있는데요. 주방용 액상 세제,
+          세탁용 액<br />상 세제, 베이킹소다, 과탄산소다 등 리필이 가능합니다. <br /><br /><br />
+        </div>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6224954214053!2d126.98772331159847!3d37.563956971922636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b9d2a20c59%3A0x482fb773543ba9cb!2z7KCc66Gc65217Iqk!5e0!3m2!1sko!2skr!4v1684307308937!5m2!1sko!2skr"
+        width="850"
+        height="250"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <br /><br />
+      <p>📌대중교통 이용시: 을지로3가역 11번 출구에서 도보 약 5분</p>
+      <br /><br /><br />
+      <h4 style="font-weight: 800">3. 세운 상가</h4>
+      <hr />
+      <div class="img_text">
+        <div class="seun_img"><img src="img/seun.png" alt="" /></div>
+        <div>
+          세운상가는 가전제품의 수요 증가로 세운상가와 을지로 일대에 자연<br />스럽게 형성된
+          전자산업 지대였습니다. 하지만 대기업과 인터넷 쇼핑<br />의 등장으로 유통 구조가 변화하면서
+          세운을 방문하는 사람들의 발길 <br />이 끊기게 되었는데요. 서울시는 전기·전자부품, 공구,
+          조명 등 다양한<br />
+          맞춤형 생산 업체들의 잠재적 가치를 발전시키기 위해 재생 사업인<br />
+          "다시·세운 프로젝트"를 통해 녹지 및 광장을 만들고 시민들과 정보를<br />
+          공유할 수 있는 복합문화공간을 통해 지속가능성을 추구하고 있습니다.
+          <br /><br /><br />
+        </div>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.378344864537!2d126.9926447115988!3d37.569707671921144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2dfd9b650cb%3A0x1e476c1b6bfe1460!2z7IS47Jq07IOB6rCA!5e0!3m2!1sko!2skr!4v1684307355589!5m2!1sko!2skr"
+        width="850"
+        height="250"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <br /><br />
+      <p>📌대중교통 이용시: 종로3가역 12번 출구에서 도보 약 5분</p>
+      <br /><br /><br />
+      <h4 style="font-weight: 800">4. 리스토어</h4>
+      <hr />
+      <div class="img_text">
+        <div class="restore_img"><img src="img/restore.png" alt="" /></div>
+        <div>
+          리스토어는 올해 3월에 신규 개점한 자연의 건강한 회복을 꿈꾸는<br />
+          제로 웨이스트 식료품점입니다. 서촌 좁은 골목 속 활기를 더해주<br />고 있는 곳이기도 하죠.
+          매일 아침 신선한 식대료로 비건 그래놀라<br />와 스프레드를 만들고 있습니다.
+          <br /><br /><br />
+        </div>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.918831564928!2d126.9649288115993!3d37.580528971918405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3df7428e5b3%3A0x5c8ab8e1279dbbf6!2z66as7Iqk7Yag7Ja0!5e0!3m2!1sko!2skr!4v1684307381942!5m2!1sko!2skr"
+        width="850"
+        height="250"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <br /><br />
+      <p>📌대중교통 이용시: 경복궁역 2번 출구에서 도보 약 10분</p>
+    </div>
+
+    <footer>
+      <div class="footer_container">
+        <div class="fc_1"></div>
+        <div class="fc_2">
+          <div class="fc_2_1 fwb">공지사항</div>
+          <div class="fc_2_2 fwb">서비스 전체보기></div>
+        </div>
+        <div class="fc_3">
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Creators</div>
+            <div class="fc_3_content">
+              <div>크리에이터</div>
+              <div class="short_line2"></div>
+              <div>스몰비즈니스</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Partners</div>
+            <div class="fc_3_content">
+              <div>SME 풀케어 시스템</div>
+              <div class="short_line2"></div>
+              <div>비즈니스 · 광고</div>
+              <div class="short_line2"></div>
+              <div>스토어 개설</div>
+              <div class="short_line2"></div>
+              <div>지역업체 등록</div>
+              <div class="short_line2"></div>
+              <div>엑스퍼트 등록</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Developers</div>
+            <div class="fc_3_content">
+              <div>개발자 센터</div>
+              <div class="short_line2"></div>
+              <div>오픈 API</div>
+              <div class="short_line2"></div>
+              <div>오픈소스</div>
+              <div class="short_line2"></div>
+              <div>KH정보교육원</div>
+              <div class="short_line2"></div>
+              <div>3조</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc_4">
+          <div class="fc_4_content">
+            <div>회사소개</div>
+            <div class="short_line2"></div>
+            <div>인재채용</div>
+            <div class="short_line2"></div>
+            <div>제휴제안</div>
+            <div class="short_line2"></div>
+            <div>이용약관</div>
+            <div class="short_line2"></div>
+            <div>개인정보처리방침</div>
+            <div class="short_line2"></div>
+            <div>청소년보호정책</div>
+            <div class="short_line2"></div>
+            <div>KH 정책</div>
+            <div class="short_line2"></div>
+            <div>고객센터</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/tema.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/9647b4736a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

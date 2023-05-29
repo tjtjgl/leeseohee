@@ -33,7 +33,7 @@ goBtn.addEventListener("click", () => {
             , confirmButtonColor: '#2F4858'
             , closeOnClickOutside: false
         }).then(function () {
-            window.location.href = "../권충오/login.html";
+            window.location.href = "/권충오/login.html";
         });
     } else {
         window.location.href = "AS2.html";

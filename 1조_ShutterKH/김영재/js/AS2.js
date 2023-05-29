@@ -381,6 +381,6 @@ submitBtn.addEventListener("click", (e) => {
         , confirmButtonColor: '#D94925'
         , closeOnClickOutside: false
     }).then(function () {
-        window.location.href = "../main.html";
+        window.location.href = "/main.html";
     });
 });

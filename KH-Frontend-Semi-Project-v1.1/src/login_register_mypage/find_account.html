@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../login_register_mypage/img/hanja-seoul_gyeong.png" type="image/png" />
+    <title>계정 찾기 - 서울 구京</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/find_account.css" />
+    <link rel="stylesheet" href="../area_theme_search/css/nav.css" />
+    <link rel="stylesheet" href="css/common/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/common/common.js"></script>
+    <script src="js/common/account_manager.js"></script>
+    <script defer src="js/find_account.js"></script>
+    <script defer src="../area_theme_search/js/nav.js"></script>
+    <script defer src="js/common.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="header active">
+        <div class="nav_1">
+          <div class="logo"></div>
+          <div class="nav_2 active_font">
+            <a style="color: black" href="../mainpage/mainPage.html"
+              ><span class="colored">홈</span></a
+            >
+            <div class="short_line"></div>
+            <a style="color: black" href="../area_theme_search/tema.html"
+              ><span class="colored">테마</span></a
+            >
+            <div class="short_line"></div>
+            <a style="color: black" href="../area_theme_search/area.html"
+              ><span class="colored">지역</span></a
+            >
+            <div class="short_line"></div>
+            <a style="color: black" href="../map_review/ReviewBoard/review_board.html"
+              ><span class="colored">여행후기</span></a
+            >
+            <div class="short_line"></div>
+            <a style="color: black" href="../map_review/Map/map.html"
+              ><span class="colored">스탬프</span></a
+            >
+          </div>
+          <!-- 로그인/비로그인 아이콘 링크 넣기 -->
+          <div class="nav_3">
+            <a href="../area_theme_search/search.html" title="검색"
+              ><i class="nav_icon fa-solid fa-magnifying-glass fa-xs"></i
+            ></a>
+            <span class="inIcon" style="display: none">
+              <a href="my_page.html" title="마이페이지"
+                ><i class="nav_icon fa-regular fa-user fa-xs"></i
+              ></a>
+              <button type="button" class="header_logout_button" title="로그아웃">
+                <i class="nav_icon fa-solid fa-xs fa-arrow-right-from-bracket"></i>
+              </button>
+            </span>
+            <span class="outIcon" style="">
+              <a href="../login_register_mypage/login.html" class="nav_icon" title="로그인">
+                <img src="../mainpage/imgs/key-fill.svg" alt="로그인" width="30px"
+              /></a>
+              <a href="../login_register_mypage/register.html" class="nav_icon" title="회원가입">
+                <img src="../mainpage/imgs/person-plus.svg" alt="회원가입" width="30px"
+              /></a>
+            </span>
+          </div>
+        </div>
+        <div class="btn-container">
+          <div id="go-top" style="position: fixed; right: 5%; bottom: 5%">
+            <a href="#"
+              ><img
+                src="../mainpage/imgs/arrow-up-circle-fill.svg"
+                alt="위로가기"
+                title="위로가기"
+                style="width: 40px"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <div id="find_account">
+        <div class="inner">
+          <h2>계정 찾기</h2>
+          <div class="inner2">
+            <form class="find_id" name="find_id">
+              <h3 class="title">아이디 찾기</h3>
+              <div class="inputs">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="이름"
+                  class="input_text_1 input_text_1_white"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="이메일"
+                  class="input_text_1 input_text_1_white"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="button_1 button_1_white">찾기</button>
+              </div>
+            </form>
+            <form class="find_pw" name="find_pw">
+              <h3 class="title">비밀번호 찾기</h3>
+              <div class="inputs">
+                <input
+                  type="text"
+                  name="id"
+                  placeholder="아이디"
+                  class="input_text_1 input_text_1_white"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="이메일"
+                  class="input_text_1 input_text_1_white"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="button_1 button_1_white">찾기</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer_container">
+          <div class="fc_1"></div>
+          <div class="fc_2">
+            <div class="fc_2_1 fwb">공지사항</div>
+            <div class="fc_2_2 fwb">서비스 전체보기></div>
+          </div>
+          <div class="fc_3">
+            <div class="fc_3_1">
+              <div class="fwb fc_3_title">Creators</div>
+              <div class="fc_3_content">
+                <div>크리에이터</div>
+                <div class="short_line2"></div>
+                <div>스몰비즈니스</div>
+              </div>
+            </div>
+            <div class="fc_3_1">
+              <div class="fwb fc_3_title">Partners</div>
+              <div class="fc_3_content">
+                <div>SME 풀케어 시스템</div>
+                <div class="short_line2"></div>
+                <div>비즈니스 · 광고</div>
+                <div class="short_line2"></div>
+                <div>스토어 개설</div>
+                <div class="short_line2"></div>
+                <div>지역업체 등록</div>
+                <div class="short_line2"></div>
+                <div>엑스퍼트 등록</div>
+              </div>
+            </div>
+            <div class="fc_3_1">
+              <div class="fwb fc_3_title">Developers</div>
+              <div class="fc_3_content">
+                <div>개발자 센터</div>
+                <div class="short_line2"></div>
+                <div>오픈 API</div>
+                <div class="short_line2"></div>
+                <div>오픈소스</div>
+                <div class="short_line2"></div>
+                <div>KH정보교육원</div>
+                <div class="short_line2"></div>
+                <div>3조</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fc_4">
+            <div class="fc_4_content">
+              <div>회사소개</div>
+              <div class="short_line2"></div>
+              <div>인재채용</div>
+              <div class="short_line2"></div>
+              <div>제휴제안</div>
+              <div class="short_line2"></div>
+              <div>이용약관</div>
+              <div class="short_line2"></div>
+              <div>개인정보처리방침</div>
+              <div class="short_line2"></div>
+              <div>청소년보호정책</div>
+              <div class="short_line2"></div>
+              <div>KH 정책</div>
+              <div class="short_line2"></div>
+              <div>고객센터</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

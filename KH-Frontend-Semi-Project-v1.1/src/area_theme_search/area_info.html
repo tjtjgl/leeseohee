@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../login_register_mypage/img/hanja-seoul_gyeong.png" type="image/png" />
+    <title>창덕궁 - 서울 구京</title>
+    <link rel="stylesheet" href="css/area_info.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../login_register_mypage/css/common/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../login_register_mypage/js/common/common.js"></script>
+    <script src="../login_register_mypage/js/common/account_manager.js"></script>
+  </head>
+  <body>
+    <header class="header active">
+      <div class="nav_1">
+        <div class="logo"></div>
+        <div class="nav_2 active_font">
+          <a style="color: black" href="../mainpage/mainPage.html"
+            ><span class="colored">홈</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="tema.html"><span class="colored">테마</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="area.html"><span class="colored">지역</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/ReviewBoard/review_board.html"
+            ><span class="colored">여행후기</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/Map/map.html"
+            ><span class="colored">스탬프</span></a
+          >
+        </div>
+        <!-- 로그인/비로그인 아이콘 링크 넣기 -->
+        <div class="nav_3">
+          <a href="search.html" title="검색"
+            ><i class="nav_icon fa-solid fa-magnifying-glass fa-xs"></i
+          ></a>
+          <span class="inIcon" style="display: none">
+            <a href="../login_register_mypage/my_page.html" title="마이페이지"
+              ><i class="nav_icon fa-regular fa-user fa-xs"></i
+            ></a>
+            <button type="button" class="header_logout_button" title="로그아웃">
+              <i class="nav_icon fa-solid fa-xs fa-arrow-right-from-bracket"></i>
+            </button>
+          </span>
+          <span class="outIcon" style="">
+            <a href="../login_register_mypage/login.html" class="nav_icon" title="로그인">
+              <img src="../mainpage/imgs/key-fill.svg" alt="로그인" width="30px"
+            /></a>
+            <a href="../login_register_mypage/register.html" class="nav_icon" title="회원가입">
+              <img src="../mainpage/imgs/person-plus.svg" alt="회원가입" width="30px"
+            /></a>
+          </span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div id="go-top" style="position: fixed; right: 5%; bottom: 5%">
+          <a href="#"
+            ><img
+              src="../mainpage/imgs/arrow-up-circle-fill.svg"
+              alt="위로가기"
+              title="위로가기"
+              style="width: 40px"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content_title">창덕궁 [유네스코 세계문화 유산]</div>
+      <div class="content_area">서울 종로구</div>
+      <div class="content_subtitle">그 시절부터 우리가 사랑한 서울의 궁궐</div>
+      <div class="content_icons">
+        <div class="icons1">
+          <i id="heart_icon" class="fa-solid fa-heart" style="color: #bababa"></i>
+
+          <i class="fa-regular fa-eye"></i>
+          15.2k
+        </div>
+        <div class="icons2">
+          <i class="fa-regular fa-bookmark"></i>
+          <i id="newopen" class="cursor fa-solid fa-print"></i>
+          <i class="fa-solid fa-share cursor"></i>
+        </div>
+      </div>
+      <div class="content_menu">
+        <span class="cursor content_menu_picture clicked">사진보기</span>
+        <div class="short_line"></div>
+        <span class="cursor content_menu_info">상세정보</span>
+        <div class="short_line"></div>
+        <span class="cursor content_menu_talk">여행톡</span>
+        <div class="short_line"></div>
+        <span>추천여행</span>
+      </div>
+      <div id="content_img" class="content_img">
+        <img src="img/jong1.jpg" alt="" />
+      </div>
+
+      <div id="content_detail" class="content_detail">
+        <div class="content_detail_title">상세정보</div>
+        <div class="content_detail_text">
+          창덕궁(사적)은 1405년 경복궁 다음으로 지어진 별궁이었다. 정궁인 경복궁의 동쪽 방면에 있다
+          해서 ''동궐''이라고도 했다. 금천교가 세워<br />
+          지고(1411) 돈화문이 건립되는가 하면(1412) 조선 제 9대 성종때부터는 여러 임금들이 여기서
+          지내 본궁역할을 하는 궁궐이 됐다. 임진왜란<br />
+          때에는 창덕궁은 불에 타고 만다. 선조가 의주로 피난을 가자 이에 화가 난 백성들이 궁궐을
+          방화한 것이다. 1611년 광해군에 의해 다시 지어<br />
+          진 궁은 자연과 인공의 조화가 잘 이루어져 많은 관광객들이 찾고 있으며 인정전, 대조전,
+          선정전, 낙선재 등 많은 문화재가 곳곳에 있어 눈길
+          <br />
+          을 끈다. 창덕궁은 1997년 12월 이탈리아 나폴리에서 열린 유네스코(UNESCO) 세계
+          유산위원회에서 수원 화성과 함께 세계문화유산으로
+        </div>
+        <div class="hidden_content disappear">
+          등록되었다.창덕궁 후원은 태종 때 만들어진 것으로 임금을 비롯한 왕족들이 휴식하던 곳이다.
+          후원은 북원(北苑), 금원(禁苑)이라고도 불렀<br />으며, 고종 이후 비원(秘苑)으로 불렀다.
+          낮은 야산과 골짜기에 원래 자연 그대로 모습을 간직한 채 꼭 필요한 곳에만 사람의 손을 댄
+          우리나라<br />의 으뜸가는 정원이다. 부용정과 부용지, 주합루와 어수문, 영화당, 불로문,
+          애련정, 연경당 등을 비롯한 수많은 정자와 샘들이 곳곳에 있다. 특<br />히 가을 날 단풍들때와
+          낙엽질 때가 가장 아름답다고 한다. <br /><br />
+          * 주요 문화재 - 인정전(국보), 돈화문(보물), 인정문(보물),선정전(보물), 희정당(보물),
+          대조전(보물), 구선원전(보물), 향나무(천연기념물)
+        </div>
+        <button class="show_content">내용 더보기 +</button>
+      </div>
+
+      <div class="content_map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.823694360711!2d126.98874271202477!3d37.582769071917795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2d7548ef6fd%3A0x8f6a7a45e7368ea0!2z7ISc7Jq47Yq567OE7IucIOyiheuhnOq1rCDsnKjqs6HroZwgOTk!5e0!3m2!1sko!2skr!4v1684458757408!5m2!1sko!2skr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div id="content_comment" class="content_comment">
+        <div class="content_comment_title">여행톡 <span style="color: skyblue">3</span></div>
+        <div class="commentbox">
+          <div class="comment_input">
+            <input type="text" placeholder="소중한 댓글을 남겨주세요" id="" />
+          </div>
+          <div class="comment_btn"><button>작성하기</button></div>
+        </div>
+
+        <div class="comment">
+          <div class="user_img">
+            <img src="img/user.png" alt="" />
+          </div>
+          <div class="user_comment">
+            <div class="user_comment_comment">
+              창덕궁은 어느계절에 가도 옳죠. 하지만 전 4~5월의 창덕궁이 정말 좋더라고요. 고즈넉하고
+              평화로운 이곳에 오면 정말 <br />
+              행복해져요.
+            </div>
+            <div class="user_comment_info">
+              <div class="user_comment_info1">토*</div>
+              <div class="user_comment_info2"></div>
+              <div class="user_comment_info3">2023.5.17</div>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="user_img">
+            <img src="img/user.png" alt="" />
+          </div>
+          <div class="user_comment">
+            <div class="user_comment_comment">
+              창덕궁은 어느계절에 가도 옳죠. 하지만 전 4~5월의 창덕궁이 정말 좋더라고요. 고즈넉하고
+              평화로운 이곳에 오면 정말 <br />
+              행복해져요.
+            </div>
+            <div class="user_comment_info">
+              <div class="user_comment_info1">토*</div>
+              <div class="user_comment_info2"></div>
+              <div class="user_comment_info3">2023.5.17</div>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="user_img">
+            <img src="img/user.png" alt="" />
+          </div>
+          <div class="user_comment">
+            <div class="user_comment_comment">
+              창덕궁은 어느계절에 가도 옳죠. 하지만 전 4~5월의 창덕궁이 정말 좋더라고요. 고즈넉하고
+              평화로운 이곳에 오면 정말 <br />
+              행복해져요.
+            </div>
+            <div class="user_comment_info">
+              <div class="user_comment_info1">토*</div>
+              <div class="user_comment_info2"></div>
+              <div class="user_comment_info3">2023.5.17</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_container">
+        <div class="fc_1"></div>
+        <div class="fc_2">
+          <div class="fc_2_1 fwb">공지사항</div>
+          <div class="fc_2_2 fwb">서비스 전체보기></div>
+        </div>
+        <div class="fc_3">
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Creators</div>
+            <div class="fc_3_content">
+              <div>크리에이터</div>
+              <div class="short_line2"></div>
+              <div>스몰비즈니스</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Partners</div>
+            <div class="fc_3_content">
+              <div>SME 풀케어 시스템</div>
+              <div class="short_line2"></div>
+              <div>비즈니스 · 광고</div>
+              <div class="short_line2"></div>
+              <div>스토어 개설</div>
+              <div class="short_line2"></div>
+              <div>지역업체 등록</div>
+              <div class="short_line2"></div>
+              <div>엑스퍼트 등록</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Developers</div>
+            <div class="fc_3_content">
+              <div>개발자 센터</div>
+              <div class="short_line2"></div>
+              <div>오픈 API</div>
+              <div class="short_line2"></div>
+              <div>오픈소스</div>
+              <div class="short_line2"></div>
+              <div>KH정보교육원</div>
+              <div class="short_line2"></div>
+              <div>3조</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc_4">
+          <div class="fc_4_content">
+            <div>회사소개</div>
+            <div class="short_line2"></div>
+            <div>인재채용</div>
+            <div class="short_line2"></div>
+            <div>제휴제안</div>
+            <div class="short_line2"></div>
+            <div>이용약관</div>
+            <div class="short_line2"></div>
+            <div>개인정보처리방침</div>
+            <div class="short_line2"></div>
+            <div>청소년보호정책</div>
+            <div class="short_line2"></div>
+            <div>KH 정책</div>
+            <div class="short_line2"></div>
+            <div>고객센터</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/area_info.js"></script>
+    <script src="js/nav.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/9647b4736a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

@@ -142,7 +142,7 @@ orderBtn.addEventListener('click', () => {
           
               }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location = "../권충오/login.html";
+                    window.location = "/권충오/login.html";
                 }
             });
         }

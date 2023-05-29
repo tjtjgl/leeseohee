@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>찜</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="js/util.js"></script>
+    <script src="js/account_manager.js"></script>
+    <script defer src="js/cart.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <div id="cart">
+        <div class="inner">
+          <h2>나의 찜</h2>
+          <div class="cards">
+            <div class="empty_cart">찜 목록이 비어있습니다.</div>
+          </div>
+          <div class="controllers" style="display: none">
+            <div class="order_select_all_cb_con">
+              <input
+                type="checkbox"
+                id="order_select_all_cb"
+                class="checkbox_default checkbox_default_large_1"
+              />
+              <label for="order_select_all_cb">모두 선택</label>
+            </div>
+            <div>
+              <button type="button" class="button_2 button_2_large_2 remove_selected_item_button">
+                삭제
+              </button>
+              <button type="button" class="button_2 button_2_large_2 payment_selected_item_button">
+                결제
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="cart_modify" style="display: none">
+          <!-- style="display: none" -->
+          <div class="inner">
+            <form name="modify_goods">
+              <h3 class="goods_modify_title">상품 수정</h3>
+              <div class="goods_modify_input">
+                <div class="goods_modify_input_item" data-type="normal">
+                  <label for="goods_modify_count">일반</label>
+                  <input
+                    type="number"
+                    id="goods_modify_count"
+                    name="goods_modify_count"
+                    class="input_text_1 input_text_1_white"
+                    min="0"
+                    max="100"
+                    value="0"
+                    required
+                  />
+                  <span class="goods_modify_price">0원</span>
+                </div>
+                <div class="goods_modify_input_item" data-type="senior">
+                  <label for="goods_modify_senior_count">시니어</label>
+                  <input
+                    type="number"
+                    id="goods_modify_senior_count"
+                    name="goods_modify_senior_count"
+                    class="input_text_1 input_text_1_white"
+                    min="0"
+                    max="100"
+                    value="0"
+                    required
+                  />
+                  <span class="goods_modify_price">0원</span>
+                </div>
+                <div class="goods_modify_input_item" data-type="kids">
+                  <label for="goods_modify_kids_count">유아</label>
+                  <input
+                    type="number"
+                    id="goods_modify_kids_count"
+                    name="goods_modify_kids_count"
+                    class="input_text_1 input_text_1_white"
+                    min="0"
+                    max="100"
+                    value="0"
+                    required
+                  />
+                  <span class="goods_modify_price">0원</span>
+                </div>
+                <div class="goods_modify_input_item" data-type="teen">
+                  <label for="goods_modify_teen_count">청소년</label>
+                  <input
+                    type="number"
+                    id="goods_modify_teen_count"
+                    name="goods_modify_teen_count"
+                    class="input_text_1 input_text_1_white"
+                    min="0"
+                    max="100"
+                    value="0"
+                    required
+                  />
+                  <span class="goods_modify_price">0원</span>
+                </div>
+              </div>
+              <div class="goods_modify_info">
+                <span>
+                  <span>인원수:</span>
+                  <span class="goods_modify_total_count">0명</span>
+                </span>
+                <span>
+                  <span>총 금액:</span>
+                  <span class="goods_modify_total_price">0원</span>
+                </span>
+              </div>
+              <div class="good_modify_buttons">
+                <button type="submit" class="modify_submit button_2 button_2_large_1">수정</button>
+                <button type="button" class="button_2 button_2_large_1 good_modify_cancel_button">
+                  취소
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

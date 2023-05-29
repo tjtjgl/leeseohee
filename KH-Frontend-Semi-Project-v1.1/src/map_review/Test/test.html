@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <!--폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@200&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/qna.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/result.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section id="main" class="mx-auto my-5 py-5 px-3">
+        <h1><b>나에게 맞는 서울 축제 찾기 </b></h1>
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto py-5">
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            navigation="true"
+            space-between="30"
+            centered-slides="true"
+            autoplay-delay="1000"
+            autoplay-disable-on-interaction="false"
+          >
+            <swiper-slide
+              ><img src="./img/main.PNG" alt="mainImage" class="img-fluid"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="./img/main2.PNG" alt="mainImage" class="img-fluid"
+            /></swiper-slide>
+            <swiper-slide
+              ><img src="./img/main3.PNG" alt="mainImage" class="img-fluid"
+            /></swiper-slide>
+          </swiper-container>
+
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+        </div>
+        <p>
+          나의 성향을 테스트 해보고<br />
+          가장 즐겁게 즐길 수 있는 <br />
+          축제를 찾아보세요 !
+        </p>
+        <button type="button" class="start" onclick="js:begin()">시작하기</button>
+      </section>
+      <section id="qna">
+        <div class="status mx-auto mt-5">
+          <div class="statusBar"></div>
+        </div>
+
+        <div class="qBox my-5 py-5 mx-auto"></div>
+
+        <div class="answerBox"></div>
+      </section>
+      <section id="result" class="mx-auto my-5 py-5 px-3">
+        <h1><b>나와 가장 잘 맞는 축제는?!</b></h1>
+        <div class="resultname"></div>
+        <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"></div>
+        <div class="resultDesc"></div>
+        <button type="button" class="Btn" onclick="location.href = '../../mainpage/mainPage.html'">
+          더 많은 축제 구경가기</button
+        ><br />
+        <!-- 가운데 배치 -->
+        <div style="width: 100%; margin: 30px 10px; text-align: center">
+          <p>공유하기</p>
+          <img src="./img/Facebook.png" id="icon" />
+          <img src="./img/Naver.png" id="icon" />
+          <img src="./img/Kakao_Story.png" id="icon" />
+          <!-- 카카오톡 공유 버튼 -->
+          <!-- 카카오톡 버튼 이미지 -->
+          <a href="javascript:shareKatalk()"><img src="./img/Kakao.png" id="icon" /></a>
+          <!-- 카카오톡 공유 JavaScript -->
+          <script>
+            // 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('67655def8d0b77aae99b8513c51d6104')
+            function shareKatalk() {
+              Kakao.Link.sendScrap({
+                requestUrl: location.href,
+              })
+            }
+          </script>
+        </div>
+      </section>
+      <script src="./js/data.js" charset="utf-8"></script>
+      <script src="./js/start.js" charset="utf-8"></script>
+      <script src="./js/share.js" charset="utf-8"></script>
+    </div>
+  </body>
+</html>

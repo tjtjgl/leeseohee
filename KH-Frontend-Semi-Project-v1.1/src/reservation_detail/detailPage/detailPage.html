@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../../login_register_mypage/img/hanja-seoul_gyeong.png"
+      type="image/png"
+    />
+    <title>선정릉 - 서울 구京</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="detailPage.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+    <!-- 폰트 설정 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../area_theme_search/css/nav.css" />
+    <link rel="stylesheet" href="../fixed_asset/style.css" />
+    <link rel="stylesheet" href="../../login_register_mypage/css/common/common.css" />
+    <script src="../../login_register_mypage/js/common/common.js"></script>
+    <script src="../../login_register_mypage/js/common/account_manager.js"></script>
+  </head>
+
+  <body>
+    <header class="header active">
+      <div class="nav_1">
+        <div class="logo"></div>
+        <div class="nav_2 active_font">
+          <a style="color: black" href="../../mainpage/mainPage.html"
+            ><span class="colored">홈</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../../area_theme_search/tema.html"
+            ><span class="colored">테마</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../../area_theme_search/area.html"
+            ><span class="colored">지역</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../../map_review/ReviewBoard/review_board.html"
+            ><span class="colored">여행후기</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href=""><span class="colored">스탬프</span></a>
+        </div>
+        <!-- 로그인/비로그인 아이콘 링크 넣기 -->
+        <div class="nav_3">
+          <a href="../../area_theme_search/search.html" title="검색"
+            ><i class="nav_icon fa-solid fa-magnifying-glass fa-xs"></i
+          ></a>
+          <span class="inIcon" style="display: none">
+            <a href="../../login_register_mypage/my_page.html" title="마이페이지"
+              ><i class="nav_icon fa-regular fa-user fa-xs"></i
+            ></a>
+            <button type="button" class="header_logout_button" title="로그아웃">
+              <i class="nav_icon fa-solid fa-xs fa-arrow-right-from-bracket"></i>
+            </button>
+          </span>
+          <span class="outIcon" style="">
+            <a href="../../login_register_mypage/login.html" class="nav_icon" title="로그인">
+              <img src="../../mainpage/imgs/key-fill.svg" alt="로그인" width="30px"
+            /></a>
+            <a href="../../login_register_mypage/register.html" class="nav_icon" title="회원가입">
+              <img src="../../mainpage/imgs/person-plus.svg" alt="회원가입" width="30px"
+            /></a>
+          </span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div id="go-top" style="position: fixed; right: 5%; bottom: 5%">
+          <a href="javascript:void 0;"
+            ><img
+              src="../../mainpage/imgs/arrow-up-circle-fill.svg"
+              alt="위로가기"
+              title="위로가기"
+              style="width: 40px"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="titleDiv">
+      <div class="title-container">
+        <h1 id="title">선정릉</h1>
+        <h2 id="subtitle">"조선 왕조의 역사와 역사적 인물의 발자취가 남겨진 곳"</h2>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // new TypeIt('#title',{
+        //     speed: 100,
+
+        // }
+        // ).pause(10).go();
+
+        new TypeIt('#subtitle', {
+          speed: 60,
+          startDelay: 1600,
+        })
+          .pause(1300)
+          .go()
+
+        document.querySelector('.titleDiv').style.opacity = 1
+        // document.querySelector('.titleDiv h2').style.opacity = 1;
+
+        document.querySelector('.titleDiv h1').classList.add('titleAnimation')
+        document.querySelector('.titleDiv h2').classList.add('titleAnimation')
+      })
+    </script>
+
+    <!-- <div class="custom-hero">
+        <div class="container">
+            <h1>
+                <span class="title">This is</span>
+                <span class="title">a long</span>
+                <span class="title">long title</span>
+              </h1>
+        </div>
+      </div> -->
+
+    <div class="site-section">
+      <div class="site-main">
+        <div class="site-date"><p>작성날짜 : 2023-05-22 작성자 : KH 4조</p></div>
+
+        <div data-scroll class="site-descript0">
+          <p>"2009년 유네스코 세계문화유산"</p>
+          <p>"서울 거주민이 뽑은 추천 여행지 100"</p>
+        </div>
+
+        <div class="site-slide">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/sec1.jpg" /></div>
+              <div class="swiper-slide"><img src="img/sec7.jpg" /></div>
+              <div class="swiper-slide"><img src="img/sec8.jpg" /></div>
+              <div class="swiper-slide"><img src="img/sec2.jpg" /></div>
+              <div class="swiper-slide"><img src="img/sec3.jpg" /></div>
+              <div class="swiper-slide"><img src="img/sec5.jpg" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <!-- slide 꺼-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <div class="site-descript1">
+          <div><h2>선정릉의 역사</h2></div>
+          <div class="descript1-box1">
+            <img data-scroll src="img/main6.jpg" alt="" id="des1_1" />
+            <img data-scroll src="img/main5.jpg" alt="" id="des1_2" />
+            <img data-scroll src="img/main2.jpg" alt="" id="des1_3" />
+          </div>
+          <div data-scroll class="descript1-box2">
+            <p>선릉역에서 도보로 단 5분이면 옛 왕가의 무덤에 닿는다.</p>
+            <p>선정릉은 사적 199호로, 세 개의 능이 있다고 해서</p>
+
+            <p>‘삼릉공원’이라고도 불린다.</p>
+            <p>조선왕조 9대 임금 성종과 계비 정현왕후 윤 씨의 무덤인 선릉,</p>
+            <p>11대 임금 중종의 무덤인 정릉이 있다.</p>
+
+            <p>임진왜란 당시 왜병에 의해 수난을 겪기도 했지만,</p>
+            <p>현재까지 잘 보존되어 2009년 유네스코 세계문화유산에 등재됐다.</p>
+            <p>능을 둘러싼 울창한 자연림은 시민들에게 한적한 휴식 공간이자</p>
+            <p>훌륭한 산책코스가 되어 준다.</p>
+          </div>
+        </div>
+
+        <div class="site-descript2">
+          <div>
+            <h2>주요 볼거리</h2>
+          </div>
+
+          <div data-scroll class="descript2-box">
+            <div class="desImgDiv">
+              <img src="img/des2_1.jpg" alt="" class="desImg" />
+            </div>
+            <div class="desTextDiv">
+              <h2>선릉(宣陵)</h2>
+              <p>
+                조선 제9대 임금 성종과 정현왕후의 능이다. 성종은 사림파를 등용하고 경국대전을
+                반포하는 등 조선 건국 이래 정비되어 온 문물과 제도를 완성시킨 왕으로 평가받고 있다.
+                선릉은 두 개의 능이 같은 이름을 사용하지만, 각각 다른 언덕에 조성된 ‘동원이강릉’
+                형태로, 12지신상이 새겨진 병풍석과 난간석이 둘러져 있다.
+              </p>
+            </div>
+          </div>
+
+          <div data-scroll class="descript2-box">
+            <div class="desImgDiv">
+              <img src="img/des2_2.jpg" alt="" class="desImg" />
+            </div>
+            <div class="desTextDiv">
+              <h2>정릉(靖陵)</h2>
+              <p>
+                조선 제11대 임금 중종의 능이다. 중종은 연산군의 잘못된 정치를 바로잡고 조광조 등
+                새로운 정치세력을 중용하여 왕도정치를 실현하고자 했으나 훈구세력의 반발로
+                기묘사화(己卯士禍)가 일어나기도 했다. 정릉은 왕 혼자 묻혀 있는 단릉 형태이다.
+              </p>
+            </div>
+          </div>
+
+          <div data-scroll class="descript2-box">
+            <div class="desImgDiv">
+              <img src="img/des2_3.jpg" alt="" class="desImg" />
+            </div>
+            <div class="desTextDiv">
+              <h2>조선왕릉</h2>
+              <p>
+                조선왕릉은 유교철학ㆍ풍수 사상이 담긴 독특한 건축과 조경 양식을 갖추고, 현재까지
+                제례와 같은 전통이 이어져 있다는 점 등에서 2009년 유네스코 세계문화유산으로
+                등재되었다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div data-scroll class="site-location">
+          <div id="mapDiv">
+            <p>위치</p>
+            <img id="locationImg" src="img/location.png" alt="" />
+          </div>
+
+          <div id="info">
+            <p>상세정보</p>
+
+            <table id="infoTable">
+              <tr>
+                <td>주소</td>
+                <td>06153 서울특별시 강남구 선릉로100길 1</td>
+              </tr>
+              <tr>
+                <td>교통 정보</td>
+                <td>2호선·분당선 선릉역 10번 출구</td>
+              </tr>
+              <tr>
+                <td>전화번호</td>
+                <td>02-568-1291</td>
+              </tr>
+              <tr>
+                <td>팩스번호</td>
+                <td>02-568-0773</td>
+              </tr>
+              <tr>
+                <td>유모차 대여</td>
+                <td>있음</td>
+              </tr>
+              <tr>
+                <td>운영요일</td>
+                <td>화 ~ 금</td>
+              </tr>
+              <tr>
+                <td>관람 시간</td>
+                <td>1시간</td>
+              </tr>
+            </table>
+
+            <button id="reservButton" onclick="window.open('../reservationPage/ReservPage.html')">
+              예약하기
+            </button>
+          </div>
+        </div>
+
+        <div data-scroll class="site-recommend">
+          <h2>연관 추천</h2>
+          <div id="recommendImgDiv">
+            <div>
+              <img src="img/recommend1.jpg" alt="" />
+              <p>경복궁 야간개장</p>
+              <button class="moreButton">보러가기</button>
+            </div>
+            <div>
+              <img src="img/recommend2.jpg" alt="" />
+              <p>반포 한강공원</p>
+              <button class="moreButton">보러가기</button>
+            </div>
+            <div>
+              <img src="img/recommend3.jpg" alt="" />
+              <p>낙산공원</p>
+              <button class="moreButton">보러가기</button>
+            </div>
+            <div>
+              <img src="img/recommend4.jpg" alt="" />
+              <p>청계천</p>
+              <button class="moreButton">보러가기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- site main box-->
+    </div>
+
+    <footer>
+      <div class="footer_container">
+        <div class="fc_1"></div>
+        <div class="fc_2">
+          <div class="fc_2_1 fwb">공지사항</div>
+          <div class="fc_2_2 fwb">서비스 전체보기></div>
+        </div>
+        <div class="fc_3">
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Creators</div>
+            <div class="fc_3_content">
+              <div>크리에이터</div>
+              <div class="short_line2"></div>
+              <div>스몰비즈니스</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Partners</div>
+            <div class="fc_3_content">
+              <div>SME 풀케어 시스템</div>
+              <div class="short_line2"></div>
+              <div>비즈니스 · 광고</div>
+              <div class="short_line2"></div>
+              <div>스토어 개설</div>
+              <div class="short_line2"></div>
+              <div>지역업체 등록</div>
+              <div class="short_line2"></div>
+              <div>엑스퍼트 등록</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Developers</div>
+            <div class="fc_3_content">
+              <div>개발자 센터</div>
+              <div class="short_line2"></div>
+              <div>오픈 API</div>
+              <div class="short_line2"></div>
+              <div>오픈소스</div>
+              <div class="short_line2"></div>
+              <div>KH정보교육원</div>
+              <div class="short_line2"></div>
+              <div>3조</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc_4">
+          <div class="fc_4_content">
+            <div>회사소개</div>
+            <div class="short_line2"></div>
+            <div>인재채용</div>
+            <div class="short_line2"></div>
+            <div>제휴제안</div>
+            <div class="short_line2"></div>
+            <div>이용약관</div>
+            <div class="short_line2"></div>
+            <div>개인정보처리방침</div>
+            <div class="short_line2"></div>
+            <div>청소년보호정책</div>
+            <div class="short_line2"></div>
+            <div>KH 정책</div>
+            <div class="short_line2"></div>
+            <div>고객센터</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        freeMode: true,
+
+        autoplay: {
+          //자동슬라이드 (false-비활성화)
+          delay: 2200, // 시간 설정
+          disableOnInteraction: false, // false-스와이프 후 자동 재생
+        },
+
+        loop: false,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      })
+    </script>
+
+    <script>
+      ScrollOut({
+        once: true,
+        // onShown: (el) => {
+
+        //     el.classList.add("floating");
+
+        // }
+      })
+    </script>
+
+    <script>
+      ScrollOut()
+
+      const logo_img = document.querySelector('.logo')
+      const header = document.querySelector('.header')
+      const colored = document.querySelectorAll('.colored')
+      const nav_icon = document.querySelectorAll('.nav_icon')
+      document.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+          logo_img.classList.remove('active_title')
+          logo_img.classList.add('deactive_title')
+
+          header.classList.remove('active')
+          header.classList.add('deactive')
+          for (let i = 0; i < colored.length; i++) {
+            colored[i].classList.add('deactive_font')
+            colored[i].classList.remove('active_font')
+          }
+          for (let i = 0; i < nav_icon.length; i++) {
+            nav_icon[i].classList.add('deactive_font')
+            nav_icon[i].classList.remove('active_font')
+          }
+        } else {
+          logo_img.classList.add('active_title')
+          logo_img.classList.remove('deactive_title')
+
+          logo_img.src = '/img/logo2.png'
+          logo_img.width = '200'
+          header.classList.remove('deactive')
+          header.classList.add('active')
+          for (let i = 0; i < colored.length; i++) {
+            colored[i].classList.remove('deactive_font')
+            colored[i].classList.add('active_font')
+          }
+          for (let i = 0; i < nav_icon.length; i++) {
+            nav_icon[i].classList.remove('deactive_font')
+            nav_icon[i].classList.add('active_font')
+          }
+        }
+      })
+    </script>
+    <script>
+      let backToTop = () => {
+        // Scroll | button show/hide
+        window.addEventListener('scroll', () => {
+          if (document.querySelector('html').scrollTop > 100) {
+            document.getElementById('go-top').style.display = 'block'
+          } else {
+            document.getElementById('go-top').style.display = 'none'
+          }
+        })
+        // back to top
+        document.getElementById('go-top').addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          })
+        })
+      }
+      backToTop()
+    </script>
+    <script defer src="../fixed_asset/script.js"></script>
+  </body>
+</html>

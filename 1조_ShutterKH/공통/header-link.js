@@ -7,13 +7,13 @@ const cartIcon = document.querySelector("#cartIcon"); // 밑에 아이콘 변경
 const loginBtn = document.getElementById("header_login_text");
 
 let links = [
-  "../권충오/newProduct.html",
-  "../구승완/프로모션.html",
-  "../이서희/제품목록.html",
-  "../구승완/전시.html",
-  "../구승완/라이브러리.html",
-  "../김영재/notice.html",
-  "../김영재/AS1.html"];
+  "/권충오/newProduct.html",
+  "/구승완/프로모션.html",
+  "/이서희/제품목록.html",
+  "/구승완/전시.html",
+  "/구승완/라이브러리.html",
+  "/김영재/notice.html",
+  "/김영재/AS1.html"];
 
 for (let i = 0; i < navLink.length; i++) {
   navLink[i].addEventListener("click", (e) => {
@@ -22,19 +22,19 @@ for (let i = 0; i < navLink.length; i++) {
 }
 
 support.addEventListener("click", () => {
-  support.setAttribute("href", "../김영재/고객지원.html");
+  support.setAttribute("href", "/김영재/고객지원.html");
 });
 
 cartIcon.addEventListener('click', () => {
-  cartIcon.setAttribute("href","../이서희/장바구니.html")
+  cartIcon.setAttribute("href","/이서희/장바구니.html")
 })
 
 loginBtn.addEventListener('click', () => {
-  loginBtn.setAttribute("href", "../권충오/login.html");
+  loginBtn.setAttribute("href", "/권충오/login.html");
 });
 
 logo.addEventListener('click', () => {
-  location.href = "../main.html"
+  location.href = "/main.html"
 })
 
 
@@ -74,7 +74,7 @@ if (loginCheck() === null) { // <------|| loginCheck() ==='' || loginCheck() ===
 /* 클릭시 팝업누르고 확인 */
 $("#header_login_text").click(() => {
   if (loginCheck() === null) { //로그인 정보 없으면 로그인페이지로 이동
-    window.location.href = "../권충오/login.html";
+    window.location.href = "/권충오/login.html";
   } else {
     Swal.fire({
       title: '<span class="popup-all popup-question">로그아웃 하시겠습니까?</span>',
@@ -95,7 +95,7 @@ $("#header_login_text").click(() => {
           closeOnClickOutside: false
         }).then(() => {
           localStorage.removeItem("loginmember");
-          window.location.href = "../main.html";
+          window.location.href = "/main.html";
         });
       }
     });

@@ -1,0 +1,44 @@
+.header_logout_button,
+.header_login_my_page_button {
+  padding: 0;
+  border: none;
+  background-color: initial;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+header .nav_1 {
+  box-sizing: border-box;
+}
+
+header .nav_3 button {
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+header .nav_3 .inIcon,
+header .nav_3 .outIcon {
+  display: flex;
+}
+
+header .nav_3 .inIcon a,
+header .nav_3 .outIcon a {
+  text-decoration: none;
+}
+
+header .nav_3 .inIcon img {
+  margin: 0 0 7px 0;
+}
+
+header .nav_3 .inIcon img,
+header .nav_3 .outIcon img {
+  transition: 0.5s ease;
+  margin: auto;
+}
+
+header .nav_3 .outIcon > * {
+  margin-right: 10px;
+  height: 45px;
+  display: flex;
+}

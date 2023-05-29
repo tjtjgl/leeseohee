@@ -411,7 +411,7 @@ $("#newbtn").click(function () {
             $("#pwcheck1, #pwcheck2, #pwcheck3").css("opacity", "0.1");
             $("#agreecheck1, #agreecheck2, #agreecheck3, #totalAgree").prop("checked", false);
             totalObject = {};
-            location.href = "../권충오/login.html"
+            location.href = "/권충오/login.html"
         })
 
     }
@@ -576,13 +576,13 @@ $("#loginbtn").click(function () {
             localStorage.setItem("loginmember", JSON.stringify(loginmember));
 
             if (document.referrer === "http://127.0.0.1:5500/%EC%9D%B4%EC%84%9C%ED%9D%AC/%EC%83%81%ED%92%88%EC%83%81%EC%84%B8.html") {
-                location.href = "../이서희/구매.html", "_self"
+                location.href = "/이서희/구매.html", "_self"
             } else if (document.referrer === "http://127.0.0.1:5500/%EA%B9%80%EC%98%81%EC%9E%AC/AS1.html") {
-                location.href = "../김영재/AS2.html", "_self"
+                location.href = "/김영재/AS2.html", "_self"
             }else if (document.referrer === "http://127.0.0.1:5500/%EC%9D%B4%EC%84%9C%ED%9D%AC/%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88.html") {
-                location.href = "../이서희/구매.html", "_self"
+                location.href = "/이서희/구매.html", "_self"
             }else {
-                location.href = "../main.html";
+                location.href = "/main.html";
             }
 
         });

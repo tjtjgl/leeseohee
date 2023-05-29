@@ -1,0 +1,140 @@
+:root {
+  --main-color: #052943;
+  --secondary-color: ;
+  --font-serif: 'Hahmlet', serif;
+  --footer-color: rgb(243 243 243);
+  --page-title-font-size: 4rem;
+  --star-color: rgb(255, 192, 75);
+  --page-container-marin-top: 8.5rem;
+  --page-container-marin-bottom: 4rem;
+}
+
+[hidden],
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+input.input_text_1 {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding: 8px;
+  color: white;
+  transition-property: color, border-bottom;
+  transition-duration: 300ms;
+}
+
+input.input_text_1:focus {
+  border-bottom: 1px solid rgb(142, 216, 245);
+}
+
+input.input_text_1::placeholder {
+  color: rgb(219, 219, 219);
+  transition-duration: 300ms;
+}
+
+input.input_text_1:focus::placeholder {
+  color: rgb(142, 216, 245);
+}
+
+input.input_text_1.input_text_1_white {
+  border-bottom: 1px solid rgb(97, 97, 97);
+  color: black;
+}
+
+input.input_text_1.input_text_1_white:focus {
+  border-bottom: 1px solid var(--main-color);
+}
+
+input.input_text_1.input_text_1_white::placeholder {
+  color: rgb(97, 97, 97);
+}
+
+input.input_text_1.input_text_1_white:focus::placeholder {
+  color: var(--main-color);
+}
+
+input.input_text_1:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.1), transparent);
+  color: rgb(128, 128, 128);
+}
+
+.button_1 {
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px 24px;
+  transition-property: background-color, border, color;
+  transition-duration: 300ms;
+}
+
+.button_1:hover {
+  background-color: rgb(142, 216, 245);
+  border: 1px solid rgb(142, 216, 245);
+  color: var(--main-color);
+}
+
+.button_1:active {
+  background-color: rgb(109, 183, 212);
+  border: 1px solid rgb(109, 183, 212);
+  color: var(--main-color);
+}
+
+.button_1.button_1_white {
+  color: black;
+  border: 1px solid black;
+}
+
+.button_2 {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  transition-property: border, background-color;
+  transition-duration: 300ms;
+  background-color: white;
+}
+
+.button_2:hover {
+  border: 1px solid rgb(142, 216, 245);
+  background-color: rgb(142, 216, 245);
+}
+
+.button_2:active {
+  border: 1px solid rgb(109, 183, 212);
+  background-color: rgb(109, 183, 212);
+}
+
+.button_2.button_2_large_1 {
+  padding: 8px 18px;
+  font-size: 16px;
+}
+
+.button_2.button_2_large_2 {
+  padding: 10px 48px;
+  font-size: 16px;
+}
+
+.checkbox_default {
+  border-radius: 0;
+}
+
+.checkbox_default.checkbox_default_large_1 {
+  transform: scale(1.5);
+}
+
+#go-top {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9999;
+  color: #052943;
+}

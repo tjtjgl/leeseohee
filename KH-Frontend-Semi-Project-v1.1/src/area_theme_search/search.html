@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../login_register_mypage/img/hanja-seoul_gyeong.png" type="image/png" />
+    <title>검색 - 서울 구京</title>
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../login_register_mypage/css/common/common.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../login_register_mypage/js/common/common.js"></script>
+    <script src="../login_register_mypage/js/common/account_manager.js"></script>
+  </head>
+  <body>
+    <header class="header active">
+      <div class="nav_1">
+        <div class="logo"></div>
+        <div class="nav_2 active_font">
+          <a style="color: black" href="../mainpage/mainPage.html"
+            ><span class="colored">홈</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="tema.html"><span class="colored">테마</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="area.html"><span class="colored">지역</span></a>
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/ReviewBoard/review_board.html"
+            ><span class="colored">여행후기</span></a
+          >
+          <div class="short_line"></div>
+          <a style="color: black" href="../map_review/Map/map.html"
+            ><span class="colored">스탬프</span></a
+          >
+        </div>
+        <!-- 로그인/비로그인 아이콘 링크 넣기 -->
+        <div class="nav_3">
+          <a href="search.html" title="검색"
+            ><i class="nav_icon fa-solid fa-magnifying-glass fa-xs"></i
+          ></a>
+          <span class="inIcon" style="display: none">
+            <a href="../login_register_mypage/my_page.html" title="마이페이지"
+              ><i class="nav_icon fa-regular fa-user fa-xs"></i
+            ></a>
+            <button type="button" class="header_logout_button" title="로그아웃">
+              <i class="nav_icon fa-solid fa-xs fa-arrow-right-from-bracket"></i>
+            </button>
+          </span>
+          <span class="outIcon" style="">
+            <a href="../login_register_mypage/login.html" class="nav_icon" title="로그인">
+              <img src="../mainpage/imgs/key-fill.svg" alt="로그인" width="30px"
+            /></a>
+            <a href="../login_register_mypage/register.html" class="nav_icon" title="회원가입">
+              <img src="../mainpage/imgs/person-plus.svg" alt="회원가입" width="30px"
+            /></a>
+          </span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <div id="go-top" style="position: fixed; right: 5%; bottom: 5%">
+          <a href="#"
+            ><img
+              src="../mainpage/imgs/arrow-up-circle-fill.svg"
+              alt="위로가기"
+              title="위로가기"
+              style="width: 40px"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <input class="text_input" type="text" placeholder="어디로, 어떤 여행을 떠날 예정인가요?" />
+
+      <div class="search_title">
+        <div class="cursor title1 click_bold">전체</div>
+        <div class="cursor title2">여행정보</div>
+        <div class="cursor title3">여행기사</div>
+        <div class="cursor title4">축제</div>
+        <div class="cursor title5">이벤트</div>
+      </div>
+      <div class="search_option">
+        <div class="search_option_icons">
+          <i class="fa-solid fa-list"></i>
+          <i class="fa-solid fa-border-all"></i>
+        </div>
+        <div class="search_option_text">
+          <span>관련도순</span>
+          <span>최신순</span>
+          <span>인기순</span>
+          <span><i class="fa-solid fa-bars"></i>옵션</span>
+        </div>
+      </div>
+
+      <div class="search_content sc3">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search1.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">청와대 도보여행, 청와대 & 청와대 사랑채</div>
+          <div class="search_content_area">서울 종로구</div>
+          <div class="search_content_hash">
+            #청와대권역관광코스_10선 #청와대 #청와대사랑채 #서울여행
+          </div>
+        </div>
+      </div>
+      <div class="search_content sc4">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search2.JPG" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">서울 명산 트레킹</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">#서울명산트레킹 #수도권 #가볼만한축제 #아이와함께</div>
+        </div>
+      </div>
+      <div class="search_content sc2">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/jong1.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title chang">창덕궁 [유네스코 세계문화유산]</div>
+          <div class="search_content_area">서울 종로구</div>
+          <div class="search_content_hash">#관광지 #역사 #역사공부 #역사문화재</div>
+        </div>
+      </div>
+      <div class="search_content sc3">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">높은 곳에서 보는 높은 가을 하늘 / 서울 전망</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">#풍경여행 #전망대여행 #서울가볼만한곳 #서울여행</div>
+        </div>
+      </div>
+      <div class="search_content sc2">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">다 같이 돌자 서울 한 바퀴~ 405번 버스 여행</div>
+          <div class="search_content_area">서울 종로구</div>
+          <div class="search_content_hash">#서울여행 #버스여행 #대중교통여행 #덕수궁</div>
+        </div>
+      </div>
+      <div class="search_content sc2">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search6.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">한가로운 여행, 책과, 서울</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">#서울가볼만한곳 #이색책방 #서점 #서울여행</div>
+        </div>
+      </div>
+      <div class="search_content sc3">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search7.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">낯익은 길목에 담긴 근대사의 함성과 눈물</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">#추천가볼만한곳 #3월추천가볼만한곳 #서울여행</div>
+        </div>
+      </div>
+      <div class="search_content sc2">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search8.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">할머니와 손주가 함께 떠나는 가을날의 서울</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">
+            #어르신추천코스 #서울가볼만한곳 #서울당일코스 #서울여행
+          </div>
+        </div>
+      </div>
+      <div class="search_content sc2">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search9.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">그리고 그것들은 행복하게 다시 쓰였습니다...</div>
+          <div class="search_content_area">서울</div>
+          <div class="search_content_hash">#서울가볼만한곳 #도심여행 #세운상가 #서울당일코스</div>
+        </div>
+      </div>
+      <div class="search_content sc3">
+        <div class="separate1">
+          <div class="search_content_img">
+            <img src="img/search10.jpg" alt="" />
+          </div>
+        </div>
+        <div class="separate2">
+          <div class="search_content_title">대중교통으로 만나는 무장애 여행 '서울 600년'</div>
+          <div class="search_content_area">서울 종로구</div>
+          <div class="search_content_hash">
+            #장애인추천코스 #서울가볼만한곳 #서울당일코스 #서울여행
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#"><</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">></a></li>
+      </ul>
+    </nav>
+    <footer>
+      <div class="footer_container">
+        <div class="fc_1"></div>
+        <div class="fc_2">
+          <div class="fc_2_1 fwb">공지사항</div>
+          <div class="fc_2_2 fwb">서비스 전체보기></div>
+        </div>
+        <div class="fc_3">
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Creators</div>
+            <div class="fc_3_content">
+              <div>크리에이터</div>
+              <div class="short_line2"></div>
+              <div>스몰비즈니스</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Partners</div>
+            <div class="fc_3_content">
+              <div>SME 풀케어 시스템</div>
+              <div class="short_line2"></div>
+              <div>비즈니스 · 광고</div>
+              <div class="short_line2"></div>
+              <div>스토어 개설</div>
+              <div class="short_line2"></div>
+              <div>지역업체 등록</div>
+              <div class="short_line2"></div>
+              <div>엑스퍼트 등록</div>
+            </div>
+          </div>
+          <div class="fc_3_1">
+            <div class="fwb fc_3_title">Developers</div>
+            <div class="fc_3_content">
+              <div>개발자 센터</div>
+              <div class="short_line2"></div>
+              <div>오픈 API</div>
+              <div class="short_line2"></div>
+              <div>오픈소스</div>
+              <div class="short_line2"></div>
+              <div>KH정보교육원</div>
+              <div class="short_line2"></div>
+              <div>3조</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc_4">
+          <div class="fc_4_content">
+            <div>회사소개</div>
+            <div class="short_line2"></div>
+            <div>인재채용</div>
+            <div class="short_line2"></div>
+            <div>제휴제안</div>
+            <div class="short_line2"></div>
+            <div>이용약관</div>
+            <div class="short_line2"></div>
+            <div>개인정보처리방침</div>
+            <div class="short_line2"></div>
+            <div>청소년보호정책</div>
+            <div class="short_line2"></div>
+            <div>KH 정책</div>
+            <div class="short_line2"></div>
+            <div>고객센터</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script src="js/nav.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/9647b4736a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </body>
+</html>
